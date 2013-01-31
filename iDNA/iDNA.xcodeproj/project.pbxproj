@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA13D7A3167F81E100FBAB4F /* YKDNA.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13D7A2167F81E100FBAB4F /* YKDNA.m */; };
+		DA15F3CD16A7110E003898FF /* YKDNAPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DA15F3CC16A7110E003898FF /* YKDNAPreferences.m */; };
+		DA79D9EF1678CB8800F8AC5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA79D9EE1678CB8800F8AC5C /* Cocoa.framework */; };
+		DA79D9F91678CB8800F8AC5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA79D9F71678CB8800F8AC5C /* InfoPlist.strings */; };
+		DA79D9FB1678CB8800F8AC5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79D9FA1678CB8800F8AC5C /* main.m */; };
+		DA79D9FF1678CB8800F8AC5C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DA79D9FD1678CB8800F8AC5C /* Credits.rtf */; };
+		DA79DA021678CB8800F8AC5C /* YKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79DA011678CB8800F8AC5C /* YKAppDelegate.m */; };
+		DA79DA051678CB8800F8AC5C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA79DA031678CB8800F8AC5C /* MainMenu.xib */; };
+		DAB4EC4B16AEDDFD0003B00F /* YKTrackingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4EC4A16AEDDFD0003B00F /* YKTrackingView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA13D7A1167F81E100FBAB4F /* YKDNA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDNA.h; sourceTree = "<group>"; };
+		DA13D7A2167F81E100FBAB4F /* YKDNA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDNA.m; sourceTree = "<group>"; };
+		DA15F3CB16A7110E003898FF /* YKDNAPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDNAPreferences.h; sourceTree = "<group>"; };
+		DA15F3CC16A7110E003898FF /* YKDNAPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDNAPreferences.m; sourceTree = "<group>"; };
+		DA79D9EA1678CB8800F8AC5C /* iDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA79D9EE1678CB8800F8AC5C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DA79D9F11678CB8800F8AC5C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DA79D9F21678CB8800F8AC5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DA79D9F31678CB8800F8AC5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA79D9F61678CB8800F8AC5C /* iDNA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDNA-Info.plist"; sourceTree = "<group>"; };
+		DA79D9F81678CB8800F8AC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA79D9FA1678CB8800F8AC5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA79D9FC1678CB8800F8AC5C /* iDNA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDNA-Prefix.pch"; sourceTree = "<group>"; };
+		DA79D9FE1678CB8800F8AC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DA79DA001678CB8800F8AC5C /* YKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppDelegate.h; sourceTree = "<group>"; };
+		DA79DA011678CB8800F8AC5C /* YKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAppDelegate.m; sourceTree = "<group>"; };
+		DA79DA041678CB8800F8AC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DAB4EC4916AEDDFD0003B00F /* YKTrackingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKTrackingView.h; sourceTree = "<group>"; };
+		DAB4EC4A16AEDDFD0003B00F /* YKTrackingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKTrackingView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA79D9E71678CB8800F8AC5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA79D9EF1678CB8800F8AC5C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA79D9DF1678CB8800F8AC5C = {
+			isa = PBXGroup;
+			children = (
+				DA79D9F41678CB8800F8AC5C /* iDNA */,
+				DA79D9ED1678CB8800F8AC5C /* Frameworks */,
+				DA79D9EB1678CB8800F8AC5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA79D9EB1678CB8800F8AC5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA79D9EA1678CB8800F8AC5C /* iDNA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA79D9ED1678CB8800F8AC5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA79D9EE1678CB8800F8AC5C /* Cocoa.framework */,
+				DA79D9F01678CB8800F8AC5C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA79D9F01678CB8800F8AC5C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA79D9F11678CB8800F8AC5C /* AppKit.framework */,
+				DA79D9F21678CB8800F8AC5C /* CoreData.framework */,
+				DA79D9F31678CB8800F8AC5C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DA79D9F41678CB8800F8AC5C /* iDNA */ = {
+			isa = PBXGroup;
+			children = (
+				DA79DA001678CB8800F8AC5C /* YKAppDelegate.h */,
+				DA79DA011678CB8800F8AC5C /* YKAppDelegate.m */,
+				DA15F3CB16A7110E003898FF /* YKDNAPreferences.h */,
+				DA15F3CC16A7110E003898FF /* YKDNAPreferences.m */,
+				DA79DA031678CB8800F8AC5C /* MainMenu.xib */,
+				DA13D7A1167F81E100FBAB4F /* YKDNA.h */,
+				DA13D7A2167F81E100FBAB4F /* YKDNA.m */,
+				DAB4EC4916AEDDFD0003B00F /* YKTrackingView.h */,
+				DAB4EC4A16AEDDFD0003B00F /* YKTrackingView.m */,
+				DA79D9F51678CB8800F8AC5C /* Supporting Files */,
+			);
+			path = iDNA;
+			sourceTree = "<group>";
+		};
+		DA79D9F51678CB8800F8AC5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA79D9F61678CB8800F8AC5C /* iDNA-Info.plist */,
+				DA79D9F71678CB8800F8AC5C /* InfoPlist.strings */,
+				DA79D9FA1678CB8800F8AC5C /* main.m */,
+				DA79D9FC1678CB8800F8AC5C /* iDNA-Prefix.pch */,
+				DA79D9FD1678CB8800F8AC5C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA79D9E91678CB8800F8AC5C /* iDNA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA79DA081678CB8800F8AC5C /* Build configuration list for PBXNativeTarget "iDNA" */;
+			buildPhases = (
+				DA79D9E61678CB8800F8AC5C /* Sources */,
+				DA79D9E71678CB8800F8AC5C /* Frameworks */,
+				DA79D9E81678CB8800F8AC5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDNA;
+			productName = iDNA;
+			productReference = DA79D9EA1678CB8800F8AC5C /* iDNA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA79D9E11678CB8800F8AC5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YK;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Yuri Kirghisov";
+			};
+			buildConfigurationList = DA79D9E41678CB8800F8AC5C /* Build configuration list for PBXProject "iDNA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA79D9DF1678CB8800F8AC5C;
+			productRefGroup = DA79D9EB1678CB8800F8AC5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA79D9E91678CB8800F8AC5C /* iDNA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA79D9E81678CB8800F8AC5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA79D9F91678CB8800F8AC5C /* InfoPlist.strings in Resources */,
+				DA79D9FF1678CB8800F8AC5C /* Credits.rtf in Resources */,
+				DA79DA051678CB8800F8AC5C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA79D9E61678CB8800F8AC5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA79D9FB1678CB8800F8AC5C /* main.m in Sources */,
+				DA79DA021678CB8800F8AC5C /* YKAppDelegate.m in Sources */,
+				DA13D7A3167F81E100FBAB4F /* YKDNA.m in Sources */,
+				DA15F3CD16A7110E003898FF /* YKDNAPreferences.m in Sources */,
+				DAB4EC4B16AEDDFD0003B00F /* YKTrackingView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA79D9F71678CB8800F8AC5C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA79D9F81678CB8800F8AC5C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA79D9FD1678CB8800F8AC5C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA79D9FE1678CB8800F8AC5C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DA79DA031678CB8800F8AC5C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA79DA041678CB8800F8AC5C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA79DA061678CB8800F8AC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DA79DA071678CB8800F8AC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA79DA091678CB8800F8AC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDNA/iDNA-Prefix.pch";
+				INFOPLIST_FILE = "iDNA/iDNA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA79DA0A1678CB8800F8AC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDNA/iDNA-Prefix.pch";
+				INFOPLIST_FILE = "iDNA/iDNA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA79D9E41678CB8800F8AC5C /* Build configuration list for PBXProject "iDNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA79DA061678CB8800F8AC5C /* Debug */,
+				DA79DA071678CB8800F8AC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA79DA081678CB8800F8AC5C /* Build configuration list for PBXNativeTarget "iDNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA79DA091678CB8800F8AC5C /* Debug */,
+				DA79DA0A1678CB8800F8AC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA79D9E11678CB8800F8AC5C /* Project object */;
+}
