@@ -18,6 +18,11 @@
 @property NSUInteger dnaLength;
 @property NSUInteger mutationRate;
 
+@property NSURL *lastOpenDirectory;
+@property NSURL *lastSelectedFile;
+
+@property NSURL *lastSaveDirectory;
+
 + (YKDNAPreferences *)sharedPreferences;
 
 @end

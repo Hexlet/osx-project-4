@@ -171,7 +171,6 @@
 
     if (self.population.count > 0) {
         NSUInteger minHammingDistance = [[self.population objectAtIndex:0] hammingDistanceToDNA:self.goalDNA];
-//        self.minimumHammingDistance = minHammingDistance;
         [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_VALUES_NOTIFICATION
                                                             object:self
                                                           userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithUnsignedInteger:minHammingDistance], @"value",
@@ -180,7 +179,6 @@
 
         if (minHammingDistance == 0) {
         // Как минимум первая ДНК (с минимальным hamming distance) совпала с Goal DNA. Ура, товарищи! Красиво съезжаем.
-//            [self isGoalReached];
             [self performSelectorOnMainThread:@selector(goalIsReached) withObject:nil waitUntilDone:YES];
             return;
         }
@@ -189,8 +187,8 @@
     // 3. Скрестить кандидатов из топ 50% и заменить результатом оставшиеся 50%.
 
     // 3.1. Берем две случайные ДНК
-    int r1 = arc4random_uniform(self.population.count/2);
-    int r2 = arc4random_uniform(self.population.count/2);
+    int r1 = arc4random_uniform((u_int32_t)self.population.count/2);
+    int r2 = arc4random_uniform((u_int32_t)self.population.count/2);
     YKDNA *dna1 = [self.population objectAtIndex:r1];
     YKDNA *dna2 = [self.population objectAtIndex:r2];
     
@@ -313,8 +311,43 @@
 
 - (IBAction)loadGoalDnaButtonPressed:(id)sender
 {
-    // Задание так и не объясняет необходимость этой кнопки, так что оставляем пустышку.
-    NSLog (@"loadGoalDnaButtonPressed:");
+    // Просим указать пользователя файл со строчкой.
+    // Если строчка похожа на строку DNA, то подстраиваем dnaLength в соответствии с новой целевой DNA
+
+    YKDNAPreferences *prefs = [YKDNAPreferences sharedPreferences];
+
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    openPanel.allowsMultipleSelection = NO;
+    openPanel.canChooseDirectories = NO;
+    openPanel.title = NSLocalizedString(@"Select Goal DNA", @"Title of Open Panel when loading Goal DNA");
+    openPanel.directoryURL = prefs.lastOpenDirectory;
+
+    [openPanel beginSheetModalForWindow:self.window completionHandler:^(NSInteger result){
+        if (result != NSFileHandlingPanelOKButton)
+            return;
+        
+        prefs.lastOpenDirectory = openPanel.directoryURL;
+        prefs.lastSelectedFile = openPanel.URL;
+
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if ([fileManager fileExistsAtPath:[openPanel.URL absoluteString]]) {
+            [self loadGoalDNAWithURL:openPanel.URL];
+        }
+    }];
+    
+}
+
+- (void)loadGoalDNAWithURL:(NSURL *)fileURL
+{
+    NSString *newGoalDnaString = [NSString stringWithContentsOfURL:fileURL encoding:NSUTF8StringEncoding error:nil];
+    if (!newGoalDnaString)
+        return;
+
+    if (newGoalDnaString.length > 1000) {
+        return;
+    }
+
+    // Process file contents checking if characters belong to dnaLatters
 }
 
 @end

@@ -15,6 +15,11 @@ static YKDNAPreferences *_sharedPreferences = nil;
 #define YK_PREFERENCES_DNA_LENGTH_KEY @"DNA Length"
 #define YK_PREFERENCES_MUTATION_RATE_KEY @"Mutation Rate"
 
+#define YK_PREFERENCES_LAST_OPEN_DIRECTORY_KEY @"Last Opened Directory"
+#define YK_PREFERENCES_LAST_OPEN_FILE_KEY @"Last Opened File"
+
+#define YK_PREFERENCES_LAST_SAVE_DIRECTORY_KEY @"Last Save Directory"
+
 @implementation YKDNAPreferences
 
 + (YKDNAPreferences *)sharedPreferences
@@ -34,7 +39,7 @@ static YKDNAPreferences *_sharedPreferences = nil;
         [factoryDefaultsDict setValue:[NSNumber numberWithUnsignedInteger:DEFAULT_POPULATION_SIZE] forKey:YK_PREFERENCES_POPULATION_SIZE_KEY];
         [factoryDefaultsDict setValue:[NSNumber numberWithUnsignedInteger:DEFAULT_DNA_LENGTH] forKey:YK_PREFERENCES_DNA_LENGTH_KEY];
         [factoryDefaultsDict setValue:[NSNumber numberWithUnsignedInteger:DEFAULT_MUTATION_RATE] forKey:YK_PREFERENCES_MUTATION_RATE_KEY];
-        
+
         // Register factory defaults
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults registerDefaults:factoryDefaultsDict];
@@ -109,6 +114,39 @@ static YKDNAPreferences *_sharedPreferences = nil;
 - (void)setMutationRate:(NSUInteger)mutationRate
 {
     [[NSUserDefaults standardUserDefaults] setInteger:mutationRate forKey:YK_PREFERENCES_MUTATION_RATE_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSURL *)lastOpenDirectory
+{
+    return [NSURL fileURLWithPath:[[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_DIRECTORY_KEY]];
+}
+
+- (void)setLastOpenDirectory:(NSURL *)lastOpenDirectory
+{
+    [[NSUserDefaults standardUserDefaults] setValue:[lastOpenDirectory absoluteString] forKey:YK_PREFERENCES_LAST_OPEN_DIRECTORY_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSURL *)lastSelectedFile
+{
+    return [NSURL fileURLWithPath:[[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_FILE_KEY]];
+}
+
+- (void)setLastSelectedFile:(NSURL *)lastSelectedFile
+{
+    [[NSUserDefaults standardUserDefaults] setValue:[lastSelectedFile absoluteString] forKey:YK_PREFERENCES_LAST_OPEN_FILE_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSURL *)lastSaveDirectory
+{
+    return [NSURL fileURLWithPath:[[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_FILE_KEY]];
+}
+
+- (void)setLastSaveDirectory:(NSURL *)lastSaveDirectory
+{
+    [[NSUserDefaults standardUserDefaults] setValue:[lastSaveDirectory absoluteString] forKey:YK_PREFERENCES_LAST_SAVE_DIRECTORY_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
