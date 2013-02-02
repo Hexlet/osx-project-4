@@ -10,12 +10,65 @@
 
 @implementation HVSPopulationOfDna
 
+//Зададим значения для пользовательских настроек
+NSString *const HVSPopulationSizeKey = @"HVSPopulationSizeKey";
+NSString *const HVSPopulationLengthDNAKey = @"HVSPopulationLengthDNAKey";
+NSString *const HVSPopulationRateKey = @"HVSPopulationRateKey";
+
+//Воспользуемся методом initialized для записи заводских настроек
++(void)initialize {
+    NSMutableDictionary *factoryValues = [NSMutableDictionary dictionary];
+    [factoryValues setObject:[NSNumber numberWithInteger:1000] forKey:HVSPopulationSizeKey];
+    [factoryValues setObject:[NSNumber numberWithInteger:30] forKey:HVSPopulationLengthDNAKey];
+    [factoryValues setObject:[NSNumber numberWithInteger:5] forKey:HVSPopulationRateKey];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:factoryValues];
+}
+
+//методы загрузки/сохранения пользовательских настроек
++(void)setPreferenceSize:(NSInteger)value {
+    [[NSUserDefaults standardUserDefaults] setInteger:value forKey:HVSPopulationSizeKey];
+}
++(NSInteger)preferenceSize {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:HVSPopulationSizeKey];
+}
++(void)setPreferenceLengthDNA:(NSInteger)value {
+    [[NSUserDefaults standardUserDefaults] setInteger:value forKey:HVSPopulationLengthDNAKey];
+}
+
++(NSInteger)preferenceLengthDNA {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:HVSPopulationLengthDNAKey];
+}
++(void)setPreferenceRate:(NSInteger)value {
+    [[NSUserDefaults standardUserDefaults] setInteger:value forKey:HVSPopulationRateKey];
+}
+
++(NSInteger)preferenceRate {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:HVSPopulationRateKey];
+}
+
+//сохранение пользовательских настроек
+-(IBAction)setSavePreference:(id)sender {
+    [HVSPopulationOfDna setPreferenceSize:[self populationSize]];
+    [HVSPopulationOfDna setPreferenceRate:[self populationRate]];
+    [HVSPopulationOfDna setPreferenceLengthDNA:[self populationLengthDna]];
+    NSLog(@"Size:%ld",[self populationSize]);
+    NSLog(@"Rate:%ld",[self populationRate]);
+    NSLog(@"Length:%ld",[self populationLengthDna]);
+}
+
+//Восстановление заводских настроек
+-(IBAction)restoreFactoryPreference:(id)sender {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:HVSPopulationSizeKey];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:HVSPopulationLengthDNAKey];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:HVSPopulationRateKey];
+}
+
 -(id)init {
     self = [super init];
     if (self) {
-        [self setPopulationLengthDna:30];
-        [self setPopulationRate:5];
-        [self setPopulationSize:1000];
+        [self setPopulationLengthDna:[HVSPopulationOfDna preferenceLengthDNA]];
+        [self setPopulationRate:[HVSPopulationOfDna preferenceRate]];
+        [self setPopulationSize:[HVSPopulationOfDna preferenceSize]];
         [self setGoalDNA:[[HVSCellDna alloc]initWithLengthDna:30]];
         [self setFlag:NO];
         [self setMaxHamming:0];

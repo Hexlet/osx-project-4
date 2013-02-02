@@ -66,6 +66,8 @@
             [result appendString:[myArrayDNA objectAtIndex:i]];
         }
         [_popTextGoalDna setStringValue:result];
+        //Сохраним пользовательскую настройку
+        [HVSPopulationOfDna setPreferenceLengthDNA:[myPopulation populationLengthDna]];
     }
     if (context==@"changePopulationSize") {
         id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
@@ -74,6 +76,8 @@
         }
         [[myManager prepareWithInvocationTarget:self] changeKeyPath:@"populationSize" ofObject:myPopulation toValue:oldValue];
         [myManager setActionName:@"Change Size"];
+        //Сохраним пользовательскую настройку
+        [HVSPopulationOfDna setPreferenceSize:[myPopulation populationSize]];
   }
     if (context==@"changePopulationRate") {
         id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
@@ -82,6 +86,8 @@
         }
         [[myManager prepareWithInvocationTarget:self] changeKeyPath:@"populationRate" ofObject:myPopulation toValue:oldValue];
         [myManager setActionName:@"Change Rate"];
+        //Сохраним пользовательскую настройку
+        [HVSPopulationOfDna setPreferenceRate:[myPopulation populationRate]];
     }
 }
 
@@ -247,7 +253,8 @@
 
 + (BOOL)autosavesInPlace
 {
-    return YES;
+    //Парит - жутко. Отключил.
+    return NO;
 }
 
 //Сохранение документа

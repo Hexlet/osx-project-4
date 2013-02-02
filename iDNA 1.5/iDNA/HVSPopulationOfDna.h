@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "HVSCellDna.h"
 
+//Для пользовательских настроек
+extern NSString *const HVSPopulationSizeKey;
+extern NSString *const HVSPopulationLengthDNAKey;
+extern NSString *const HVSPopulationRateKey;
+
 @interface HVSPopulationOfDna : NSObject
 
 //Свойства популяции ДНК, определяющие размер популяции, размер 1-ой ДНК и процент мутации.
@@ -26,11 +31,24 @@
 //Количество проходов
 @property NSInteger countEvolution;
 
+//Методы для загрузки/сохранения пользовательских настроек
++(void)setPreferenceSize:(NSInteger)value;
++(NSInteger)preferenceSize;
++(void)setPreferenceLengthDNA:(NSInteger)value;
++(NSInteger)preferenceLengthDNA;
++(void)setPreferenceRate:(NSInteger)value;
++(NSInteger)preferenceRate;
+
+
 -(id) init;
 
 //метод заполнения популяции
 -(void)setPopulation;
 //метод эволюции
 - (void)evolution;
+//Метод сохранения пользовательских настроек
+-(IBAction)setSavePreference:(id)sender;
+//Восстановление заводских настроек
+-(IBAction)restoreFactoryPreference:(id)sender;
 
 @end
