@@ -253,6 +253,15 @@
 //Сохранение документа
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
 {
+    //Проверим, действительно ли пользователь хочет сохранить файл.
+    NSInteger choice = NSRunAlertPanel(NSLocalizedString(@"FILE_SAVE_NAME",@"Сохранение данных в файл")
+                                       ,NSLocalizedString(@"FILE_SAVE_MSG",@"Вы действительно хотите сохранить документ?")
+                                       ,NSLocalizedString(@"YES","")
+                                       ,NSLocalizedString(@"NO",""), nil);
+    if (choice != 1) {
+        return nil;
+    }
+    
     NSMutableData *saveData = [[NSMutableData alloc]init];
     NSKeyedArchiver *myKeyArchiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:saveData];
     [myKeyArchiver encodeInteger:[myPopulation populationSize] forKey:@"populationSize"];
@@ -272,8 +281,17 @@
     return saveData;
 }
 
+//Загрузка файла
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
 {
+    //Проверим, действительно ли пользователь хочет загрузить файл.
+    NSInteger choice = NSRunAlertPanel(NSLocalizedString(@"FILE_LOAD_NAME",@"Загрузка данных из файла"),
+                                       NSLocalizedString(@"FILE_LOAD_MSG",@"Вы действительно хотите открыть новый документ?"),
+                                       NSLocalizedString(@"YES",""),
+                                       NSLocalizedString(@"NO",""), nil);
+    if (choice != 1) {
+        return NO;
+    }
     
     NSKeyedUnarchiver *myKeyArchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
     HVSPopulationOfDna *newMyPopulation = nil;
@@ -306,6 +324,21 @@
     [myPopulation addObserver:self forKeyPath:@"populationSize" options:NSKeyValueObservingOptionOld context:@"changePopulationSize"];
     [myPopulation addObserver:self forKeyPath:@"populationRate" options:NSKeyValueObservingOptionOld context:@"changePopulationRate"];
     return YES;
+}
+
+//Закрытие документа
+- (BOOL)windowShouldClose:(id)sender
+{
+    //NSLog(@"CLoooose");
+    NSInteger choice = NSRunAlertPanel(NSLocalizedString(@"DOC_CLOSE_NAME",@"Закрытие документа"),
+                                       NSLocalizedString(@"DOC_CLOSE_MSG",@"Вы действительно хотите закрыть документ?"),
+                                       NSLocalizedString(@"YES",""),
+                                       NSLocalizedString(@"NO",""), nil);
+    if (choice == 1) {
+        return YES;
+        
+    }
+    return NO;
 }
 
 @end
