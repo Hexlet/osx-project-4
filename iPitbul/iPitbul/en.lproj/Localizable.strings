@@ -1,0 +1,42 @@
+/* CONTROLS */
+"button.ok" = "OK";
+
+/* GENERAL MESSAGES */
+"error.title" = "ERROR";
+"error.message.unsupportedDevice" = "This Application works properly only on iPhone.";
+
+"error.sms.message.unableToMakeCall" = "Unable to make call on Simulator.";
+"error.sms.message.unableToSendSms" = "Unable to send SMS on Simulator.";
+"error.email.message.unableToSendEmail" = "Unable to send Email on Simulator.";
+
+"AM" = "Arm";
+"DM" = "Disarm";
+"GM" = "Get balance";
+"ST" = "Current alarm status";
+"PW" = "Current power status";
+"ID" = "Software version";
+"IM" = "Get IMEI";
+"GL" = "GSM Level in %";
+"S1" = "Turn on alarm";
+"S0" = "Turn off alarm";
+"SM" = "Replenish balance";
+
+/* MAIN VIEW */
+"main.view.table.header.management.actions" = "Management Actions";
+"main.view.table.header.service.actions" = "Service Actions";
+
+/* SETTINGS VIEW */
+"settings.view.error.message.invalidPitbulPhoneNumber" = "Invalid phone number format.";
+"settings.view.error.message.invalidPitbulPassword" = "Password should be 4 digits.";
+
+/* ABOUT VIEW */
+"about.view.table.action.agreement" = "Agreement";
+"about.view.table.action.tellFriends" = "Tell Friends";
+"about.view.table.action.rateApplication" = "Rate Application";
+"about.view.table.action.emailSupport" = "Email Support";
+
+"about.view.email.subject.tellFriends" = "iPitbul is already in iTunes AppStore!";
+"about.view.email.body.tellFriends" = "<p>Hi,</p><p>The BEST application to manage your&nbsp;<a href=\"http://pitbul.com.ua\">PITBUL Security GSM Alarm System</a>.</p><h2><img style=\"float: left;\" src=\"https://lh3.ggpht.com/iB4QysxP6N3HZ-iGspkBvKmjFpx3veyNGgswG2P7_GhV1FApCLubhke-upk4dD3KVljy=w124\" alt=\"iPitbul\" width=\"96\" height=\"96\" />&nbsp;<strong>iPitbul</strong><br /><span style=\"font-size: medium; font-style: italic;\">&nbsp;Category: Utilities</span><br />&nbsp;<a href=\"http://www.itunes.com/apps/iPitbul\">Check out!</a></h2>";
+
+"about.view.email.subject.emailSupport" = "Feedback iPitbul";
+"about.view.email.body.emailSupport" = "<p><br/><br/><br/></p><hr/><p style=\"padding-left: 30px;\"><strong>Application:&nbsp;</strong>%@<br/><strong>Device:&nbsp;</strong>%@<br/><strong>Device OS:&nbsp;</strong>%@</p><hr/>";
