@@ -1,0 +1,42 @@
+/* CONTROLS */
+"button.ok" = "OK";
+
+/* GENERAL MESSAGES */
+"error.title" = "ОШИБКА";
+"error.message.unsupportedDevice" = "Это приложение работает только на iPhone.";
+
+"error.sms.message.unableToMakeCall" = "Невозможно сделать вызов на Симуляторе.";
+"error.sms.message.unableToSendSms" = "Не могу отправить СМС на Симуляторе.";
+"error.email.message.unableToSendEmail" = "Не могу отправить письмо на Симуляторе.";
+
+"AM" = "Поставить на охрану";
+"DM" = "Снять с охраны";
+"GM" = "Получить баланс";
+"ST" = "Текущий статус";
+"PW" = "Питание сети";
+"ID" = "Версия ПО";
+"IM" = "Получить IMEI";
+"GL" = "Уровень GSM в %";
+"S1" = "Включить сирену";
+"S0" = "Выключить сирену";
+"SM" = "Пополнить счёт";
+
+/* MAIN VIEW */
+"main.view.table.header.management.actions" = "Управление Сигнализацией";
+"main.view.table.header.service.actions" = "Сервисные Функции";
+
+/* SETTINGS VIEW */
+"settings.view.error.message.invalidPitbulPhoneNumber" = "Неверний формат телефона.";
+"settings.view.error.message.invalidPitbulPassword" = "Пароль должен состоять из 4 цифр.";
+
+/* ABOUT VIEW */
+"about.view.table.action.agreement" = "Соглашение";
+"about.view.table.action.tellFriends" = "Рассказать Друзьям";
+"about.view.table.action.rateApplication" = "Оценить Приложение";
+"about.view.table.action.emailSupport" = "Напишите Нам";
+
+"about.view.email.subject.tellFriends" = "iPitbul is already in iTunes AppStore!";
+"about.view.email.body.tellFriends" = "<p>Hi,</p><p>The BEST application to manage your&nbsp;<a href=\"http://pitbul.com.ua\">PITBUL Security GSM Alarm System</a>.</p><h2><img style=\"float: left;\" src=\"https://lh3.ggpht.com/iB4QysxP6N3HZ-iGspkBvKmjFpx3veyNGgswG2P7_GhV1FApCLubhke-upk4dD3KVljy=w124\" alt=\"iPitbul\" width=\"96\" height=\"96\" />&nbsp;<strong>iPitbul</strong><br /><span style=\"font-size: medium; font-style: italic;\">&nbsp;Category: Utilities</span><br />&nbsp;<a href=\"http://www.itunes.com/apps/iPitbul\">Check out!</a></h2>";
+
+"about.view.email.subject.emailSupport" = "Feedback iPitbul";
+"about.view.email.body.emailSupport" = "<p><br/><br/><br/></p><hr/><p style=\"padding-left: 30px;\"><strong>Application:&nbsp;</strong>%@<br/><strong>Device:&nbsp;</strong>%@<br/><strong>Device OS:&nbsp;</strong>%@</p><hr/>";

@@ -1,16 +1,100 @@
-# Проект 4
+#Project 4 (Own Project). iPitbul
 
-## Один из двух вариантов на ваш выбор:
+##Problem
+**iPitbul** is the utility application that helps control of Pitbul Security GSM Alarm Systems via SMS or Call.
 
-### Вариант 1. Собственное приложение
-1. Необходимо закончить разработку приложения и выложить исполняемый файл (готовый продукт)
-2. Ваше приложение должно запускаться.
-3. Нужно сдать весь проект (project-файл, файлы-ресурсы, .xib-файл и так далее – всю папку).
+##Customer
+Owners of Pitbul Security GSM Alarm Systems.
 
-### Вариант 2. iDNA
+##Usage
+Remotely, using **iPitbul**, user is able to:
+                 
+**DO:**
 
-1. Добавить локализацию (русский язык или английский если изначально был русский). 
-2. Добавить всплывающие окна для подтверждения открытия, сохранения файлов и закрытия приложения.
-3. Сохранять настройки эволюции в системе (user defaults) и загружать их при новом запуске приложения.
-4. Использовать движение мыши в качестве источника случайности. Перед стартом эволюции пользователю должен совершить несколько движений мышью; координаты курсора будут использоваться в качестве некоторых исходных данных для генератора случайных чисел. Сбор этих координат должен отоброжаться прогресс-баром.
- 
+- *arm*
+- *disarm*
+- *turn on alarm*
+- *turn off alarm*
+- *replenish balance*
+
+**REQUEST:**
+
+- *balance*
+- *current alarm status*
+- *current power status*
+- *software version*
+- *IMEI*
+- *GSM level in percentage*
+
+***
+##Behaviour
+####UML Use Case Diagram
+![Use Case Diagram](https://raw.github.com/moleksyuk/osx-project-3/master/Docs/UseCaseDiagram.png)
+####UML Activiy Diagram
+![Activiy Diagram](https://raw.github.com/moleksyuk/osx-project-3/master/Docs/ActivityDiagram.png)
+
+
+`Check Configuration` - during each start of the application it should check whether it is configured or not.
+In case when the application is **NOT CONFIGURED** a user should see `Settings View`. There user have to specify *phone number* & *password* required to correct managment of GSM Alarm System. These settings can be changed in any time from `Main View` via *Settings Button* on toolbar.
+
+`Main View` - contains all available commands for managment of Pitbul Security GSM Alarm Systems devided in two sections:
+
+- **Managment**
+	- *Phone Number*
+	- *Arm*
+	- *Disarm*
+- **Service Functions**
+	- *Balance*
+	- *Current alarm status*
+	- *Current power status*
+	- *Software version*
+	- *IMEI*
+	- *GSM level in percentage*
+	- *Turn on alarm*
+	- *Turn off alarm*
+	- *Replenish balance*
+
+`Execute Command` - clicking on *Phone Number* makes a call. Clicking on one of other commands opens SMS Window with predefined *Phone Number* and *Appropriate Message Body*.
+
+`About View` - contains information about version, author etc. On this view user can `Rate Application`, `Tell Friends` about application via email and contact with support team via `Email Support`.
+
+**iPitbul** must support 3 languages:
+
+- English
+- Ukrainian
+- Russian
+
+---
+##And more…
+
+[Yuml](http://yuml.me/) code for UML Use Case Diagram
+
+````
+[Customer]-(Run Application)
+(Run Application)>(Check User's Settings)
+[Customer]-(Open Main View)
+(Open Main View)<(Open Settings View)
+(Open Main View)<(Open About View)
+(Open Main View)<(Execute Command)
+(Execute Command)>(Use User's Settings)
+(Open Settings View)<(Change User's Settings)
+(Open About View)<(Lagal & Privacy)
+(Open About View)<(Rate Application)
+(Open About View)<(Tell Friends)
+(Open About View)<(Email Support)
+````
+
+
+[Yuml](http://yuml.me/) code for UML Activity Diagram
+
+````
+(start)->(Check Configuration)-><a>-CONFIGURED>[Main View],
+<a>-NOT CONFIGURED>[Settings View]->(Set/Change Settings)->[Main View],
+[Main View]->[Settings View],
+[Main View]->(Execute Command)->(end),
+[Main View]->[About View]->[Main View],
+[About View]->(Rate Application)->(end),
+[About View]->(Tell Friends)->(end),
+[About View]->(Legal & Privacy)->(end),
+[About View]->(Email Support)->(end)
+````
