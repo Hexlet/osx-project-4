@@ -46,7 +46,7 @@ NSString *const HVSPopulationRateKey = @"HVSPopulationRateKey";
     return [[NSUserDefaults standardUserDefaults] integerForKey:HVSPopulationRateKey];
 }
 
-//сохранение пользовательских настроек
+//сохранение пользовательских настроек -  уже не нужно, сделал автоматически.
 -(IBAction)setSavePreference:(id)sender {
     [HVSPopulationOfDna setPreferenceSize:[self populationSize]];
     [HVSPopulationOfDna setPreferenceRate:[self populationRate]];
@@ -56,12 +56,24 @@ NSString *const HVSPopulationRateKey = @"HVSPopulationRateKey";
     NSLog(@"Length:%ld",[self populationLengthDna]);
 }
 
-//Восстановление заводских настроек
+//Восстановление заводских настроек - вызвывается в меню "Файл" -
 -(IBAction)restoreFactoryPreference:(id)sender {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:HVSPopulationSizeKey];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:HVSPopulationLengthDNAKey];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:HVSPopulationRateKey];
 }
+
+//методы которые устанавливают наше число для генерации случайных чисел
+-(unsigned int)intGenerate {
+    return intGenerate;
+}
+
+-(void)setIntGenerate:(unsigned int)intG {
+    intGenerate = intG;
+    //вызываем srandom, что бы пересоздать генератор случайных чисел для random в методе, который используется в методе evolution, для случайного выбора метода скрещивания
+    srandom(intG);
+}
+
 
 -(id)init {
     self = [super init];
@@ -69,10 +81,12 @@ NSString *const HVSPopulationRateKey = @"HVSPopulationRateKey";
         [self setPopulationLengthDna:[HVSPopulationOfDna preferenceLengthDNA]];
         [self setPopulationRate:[HVSPopulationOfDna preferenceRate]];
         [self setPopulationSize:[HVSPopulationOfDna preferenceSize]];
-        [self setGoalDNA:[[HVSCellDna alloc]initWithLengthDna:30]];
+        [self setGoalDNA:[[HVSCellDna alloc]initWithLengthDna:(int)[HVSPopulationOfDna preferenceLengthDNA]]];
         [self setFlag:NO];
         [self setMaxHamming:0];
         [self setCountEvolution:0];
+        //переменная генерации
+        [self setIntGenerate:nil];
     }
     return self;
 }
@@ -126,9 +140,9 @@ NSString *const HVSPopulationRateKey = @"HVSPopulationRateKey";
         _countEvolution++;
         //Цикл по второй половине популяция, для их замены.
         for (int i=(int)_populationSize/2; i<=_populationSize-1; i++) {
-            //Случайный выбор метода.
-            int random = arc4random_uniform(3);
-            switch (random) {
+            //Случайный выбор метода. (Используем генератор полученный с помощью мышки)
+            //int random = arc4random_uniform(3);
+            switch (random() % 3) {
                 case 0:
                     tempDNA1 = arc4random_uniform((int)_populationSize/2);
                     tempDNA2 = arc4random_uniform((int)_populationSize/2);

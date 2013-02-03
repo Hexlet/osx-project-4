@@ -8,12 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 #import "HVSPopulationOfDna.h"
+#import "HVSGenerateWindowController.h"
+
+//Для получения сообщения из Центра уведомлений
+extern NSString *const HVSMyRandomNumberNotification;
 
 @interface HVSDocument : NSDocument {
     //Определяем нашу популяцию
     HVSPopulationOfDna *myPopulation;
     //Флаг Паузы
     BOOL flagPause;
+    //Окно генерации случайных чисел
+    HVSGenerateWindowController *generate;
 }
 //Свойста для работы с объектами на форме
 //Текстовые поля
@@ -38,6 +44,7 @@
 
 //Действия
 - (IBAction)buttonStart:(id)sender;
+- (IBAction)buttonStartNew:(id)sender; //Будет вызываться вместо buttonStart, для генерации слуайных чисел.
 - (IBAction)buttonPause:(id)sender;
 - (IBAction)buttonLoad:(id)sender;
 //Фоновый поток

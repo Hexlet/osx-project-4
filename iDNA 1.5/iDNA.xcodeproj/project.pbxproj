@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E78308116BE6AD7000A5DEF /* HVSGenerateWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E78307F16BE6AD7000A5DEF /* HVSGenerateWindowController.m */; };
+		2E78308316BE843B000A5DEF /* HVSGenerateWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E78308516BE843B000A5DEF /* HVSGenerateWindowController.xib */; };
 		2EE1D4B016BD3157007B91F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EE1D4B216BD3157007B91F8 /* Localizable.strings */; };
 		2EEBA40516875CA5004EC063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEBA40416875CA5004EC063 /* Cocoa.framework */; };
 		2EEBA40F16875CA5004EC063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EEBA40D16875CA5004EC063 /* InfoPlist.strings */; };
@@ -24,8 +26,12 @@
 		2E7704F716BD281F00CCBDF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2E7704F816BD281F00CCBDF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2E7704F916BD281F00CCBDF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2EE1D4B116BD3157007B91F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2EE1D4B316BD315A007B91F8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2E78307E16BE6AD7000A5DEF /* HVSGenerateWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVSGenerateWindowController.h; sourceTree = "<group>"; };
+		2E78307F16BE6AD7000A5DEF /* HVSGenerateWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVSGenerateWindowController.m; sourceTree = "<group>"; };
+		2E78308416BE843B000A5DEF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HVSGenerateWindowController.xib; sourceTree = "<group>"; };
+		2E78308616BE8443000A5DEF /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HVSGenerateWindowController.xib; sourceTree = "<group>"; };
+		2EE1D4B116BD3157007B91F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2EE1D4B316BD315A007B91F8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2EEBA40016875CA5004EC063 /* iDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEBA40416875CA5004EC063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2EEBA40716875CA5004EC063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +111,9 @@
 				2EEBA41716875CA5004EC063 /* HVSDocument.m */,
 				2EEBA41916875CA5004EC063 /* HVSDocument.xib */,
 				2EEBA41C16875CA6004EC063 /* MainMenu.xib */,
+				2E78307E16BE6AD7000A5DEF /* HVSGenerateWindowController.h */,
+				2E78307F16BE6AD7000A5DEF /* HVSGenerateWindowController.m */,
+				2E78308516BE843B000A5DEF /* HVSGenerateWindowController.xib */,
 				2EEBA40B16875CA5004EC063 /* Supporting Files */,
 			);
 			path = iDNA;
@@ -181,6 +190,7 @@
 				2EEBA41B16875CA5004EC063 /* HVSDocument.xib in Resources */,
 				2EEBA41E16875CA6004EC063 /* MainMenu.xib in Resources */,
 				2EE1D4B016BD3157007B91F8 /* Localizable.strings in Resources */,
+				2E78308316BE843B000A5DEF /* HVSGenerateWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,12 +205,22 @@
 				2EEBA41816875CA5004EC063 /* HVSDocument.m in Sources */,
 				2EEBA42616875D19004EC063 /* HVSCellDna.m in Sources */,
 				2EEBA42D168774BE004EC063 /* HVSPopulationOfDna.m in Sources */,
+				2E78308116BE6AD7000A5DEF /* HVSGenerateWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2E78308516BE843B000A5DEF /* HVSGenerateWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E78308416BE843B000A5DEF /* en */,
+				2E78308616BE8443000A5DEF /* ru */,
+			);
+			name = HVSGenerateWindowController.xib;
+			sourceTree = "<group>";
+		};
 		2EE1D4B216BD3157007B91F8 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

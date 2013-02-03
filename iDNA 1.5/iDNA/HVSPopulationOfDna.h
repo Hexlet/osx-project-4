@@ -14,8 +14,13 @@ extern NSString *const HVSPopulationSizeKey;
 extern NSString *const HVSPopulationLengthDNAKey;
 extern NSString *const HVSPopulationRateKey;
 
-@interface HVSPopulationOfDna : NSObject
+@interface HVSPopulationOfDna : NSObject {
+    //Переменная для инициализации случайных чисел
+    unsigned int intGenerate;
+}
 
+//Переменная для инициализации случайных чисел
+@property unsigned int intGenerate;
 //Свойства популяции ДНК, определяющие размер популяции, размер 1-ой ДНК и процент мутации.
 @property NSInteger populationSize;
 @property NSInteger populationLengthDna;
@@ -50,5 +55,9 @@ extern NSString *const HVSPopulationRateKey;
 -(IBAction)setSavePreference:(id)sender;
 //Восстановление заводских настроек
 -(IBAction)restoreFactoryPreference:(id)sender;
+
+//Перезапишем методы к свойству intGenerate
+-(unsigned int)intGenerate;
+-(void)setIntGenerate:(unsigned int)intG;
 
 @end

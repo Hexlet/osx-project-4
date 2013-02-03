@@ -9,8 +9,12 @@
 #import "HVSDocument.h"
 #import "HVSCellDna.h"
 #import "HVSPopulationOfDna.h"
+#import "HVSGenerateWindowController.h"
 
 @implementation HVSDocument
+
+//Для получения сообщения из Центра уведомлений
+NSString *const HVSMyRandomNumberNotification = @"HVSMyRandomNumberNotification";
 
 - (id)init
 {
@@ -22,6 +26,9 @@
         [myPopulation addObserver:self forKeyPath:@"populationLengthDna" options:NSKeyValueObservingOptionOld context:@"changePopulationLengthDNA"];
         [myPopulation addObserver:self forKeyPath:@"populationSize" options:NSKeyValueObservingOptionOld context:@"changePopulationSize"];
         [myPopulation addObserver:self forKeyPath:@"populationRate" options:NSKeyValueObservingOptionOld context:@"changePopulationRate"];
+        //Добавим себя слушателем для Центра уведомлений. Будем ожидать когда закончится генерация случайного числа.
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        [nc addObserver:self selector:@selector(handleRandomNumber:) name:HVSMyRandomNumberNotification object:nil];
         flagPause=NO;
     }
     return self;
@@ -32,6 +39,9 @@
     [myPopulation removeObserver:self forKeyPath:@"populationLengthDna"];
     [myPopulation removeObserver:self forKeyPath:@"populationSize"];
     [myPopulation removeObserver:self forKeyPath:@"populationRate"];
+    //Уберем себя из наблюдателей
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc removeObserver:self];
 }
 //Доп метод
 -(void) changeKeyPath:(NSString *) keyPath
@@ -120,9 +130,44 @@
     [_popButtonPause setEnabled:NO];
 }
 
+//Метод запускается когда приходит сообщение о окончании процесса генерации случайного числа
+-(void)handleRandomNumber:(NSNotification *) notif {
+    
+    //в UserInfo объекта NSNotification данне о нашем случайном числе
+    unsigned int temp = [[notif userInfo] objectForKey:@"myRandomNumber"];
+    //устанавливаем
+    [myPopulation setIntGenerate:temp];
+    //теперь все готово и можно снова запускать эволюцию
+    [self buttonStart:self];
+}
 
-//Нажата кнопка Старт
+
+//Метд который обрабатывает нажатие на кнопку старт. Если случ.число еще не сгенерилось, то запускаем окно генерации.
+-(IBAction)buttonStartNew:(id)sender {
+    
+    if (![myPopulation intGenerate]) {
+           if (!generate) {
+                generate = [[HVSGenerateWindowController alloc] init];
+            }
+            [generate showWindow:self];
+            //как только будет сгенерировано случаное число, метод buttonStart запуститься автоматически из метода handleRandomNumber Центра сообщений
+    }
+    else { //запускаем основной процесс эволюции если случ. число уже готово. и/или нажимаем кнопку после Паузы
+        [self buttonStart:self];
+    }
+
+    
+}
+
+//Нажата кнопка Старт - теперь этот метод не обрабатывает нажатие, сначала запускается buttonStartNew
 - (IBAction)buttonStart:(id)sender {
+    
+    //Доп. проверка
+    //Проверяем, если еще не генерировано число, то выходим
+    if (![myPopulation intGenerate]) {
+        return;
+    }
+    
     //Меняем интерфейс
     
     [_popTextSize setEnabled:NO];
