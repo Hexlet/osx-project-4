@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  iDNA
+
+  Created by VladIslav Khazov on 02.02.13.
+  Copyright (c) 2013 VladIslav Khazov. All rights reserved.
+*/
+
+"EXIT"                  = "Exit";
+"WARNING_DNA"           = "DNA can not be less than 1 and greater than 100. You killed her!";
+"OK"                    = "Ok";
+"CANCEL"                = "Cancel";
+"WARNING_DNA_SIZE"      = "DNA have a different dimension!";
+"WARNING_MUTATE"        = "Set a wrong parameter 'Mutation rate'. Both DNA remained unchanged";
+"WARNING_FILE_SYM"      = "It looks like the file contains a character not related to DNA or it has control characters (Prov. carriage return)";
+"FILE_LENGTH"           = "This file has a length %ld";
+"WARNING_FILE_LENGTH"   = "This file contains the DNA of another dimension or size of more than 100 items!";
+"FILE_SAVE_NAME"        = "Saving data to file";
+"FILE_SAVE_MSG"         = "Do you really want to save the document?";
+"FILE_LOAD_NAME"        = "Loading data from file";
+"FILE_LOAD_MSG"         = "Do you really want to open a new document?";
+"YES"                   = "Yes";
+"NO"                    = "No";
+"DOC_CLOSE_NAME"        = "Closing a document";
+"DOC_CLOSE_MSG"         = "Do you really want to close the document?";

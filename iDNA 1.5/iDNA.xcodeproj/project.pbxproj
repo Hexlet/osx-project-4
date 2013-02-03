@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E78308116BE6AD7000A5DEF /* HVSGenerateWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E78307F16BE6AD7000A5DEF /* HVSGenerateWindowController.m */; };
+		2E78308316BE843B000A5DEF /* HVSGenerateWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E78308516BE843B000A5DEF /* HVSGenerateWindowController.xib */; };
+		2EE1D4B016BD3157007B91F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EE1D4B216BD3157007B91F8 /* Localizable.strings */; };
+		2EEBA40516875CA5004EC063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEBA40416875CA5004EC063 /* Cocoa.framework */; };
+		2EEBA40F16875CA5004EC063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EEBA40D16875CA5004EC063 /* InfoPlist.strings */; };
+		2EEBA41116875CA5004EC063 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEBA41016875CA5004EC063 /* main.m */; };
+		2EEBA41516875CA5004EC063 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2EEBA41316875CA5004EC063 /* Credits.rtf */; };
+		2EEBA41816875CA5004EC063 /* HVSDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEBA41716875CA5004EC063 /* HVSDocument.m */; };
+		2EEBA41B16875CA5004EC063 /* HVSDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EEBA41916875CA5004EC063 /* HVSDocument.xib */; };
+		2EEBA41E16875CA6004EC063 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EEBA41C16875CA6004EC063 /* MainMenu.xib */; };
+		2EEBA42616875D19004EC063 /* HVSCellDna.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEBA42516875D19004EC063 /* HVSCellDna.m */; };
+		2EEBA42D168774BE004EC063 /* HVSPopulationOfDna.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEBA42C168774BE004EC063 /* HVSPopulationOfDna.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E7704F616BD281F00CCBDF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HVSDocument.xib; sourceTree = "<group>"; };
+		2E7704F716BD281F00CCBDF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2E7704F816BD281F00CCBDF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E7704F916BD281F00CCBDF3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2E78307E16BE6AD7000A5DEF /* HVSGenerateWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVSGenerateWindowController.h; sourceTree = "<group>"; };
+		2E78307F16BE6AD7000A5DEF /* HVSGenerateWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVSGenerateWindowController.m; sourceTree = "<group>"; };
+		2E78308416BE843B000A5DEF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HVSGenerateWindowController.xib; sourceTree = "<group>"; };
+		2E78308616BE8443000A5DEF /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HVSGenerateWindowController.xib; sourceTree = "<group>"; };
+		2EE1D4B116BD3157007B91F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2EE1D4B316BD315A007B91F8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2EEBA40016875CA5004EC063 /* iDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EEBA40416875CA5004EC063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2EEBA40716875CA5004EC063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2EEBA40816875CA5004EC063 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2EEBA40916875CA5004EC063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2EEBA40C16875CA5004EC063 /* iDNA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDNA-Info.plist"; sourceTree = "<group>"; };
+		2EEBA40E16875CA5004EC063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EEBA41016875CA5004EC063 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2EEBA41216875CA5004EC063 /* iDNA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDNA-Prefix.pch"; sourceTree = "<group>"; };
+		2EEBA41416875CA5004EC063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2EEBA41616875CA5004EC063 /* HVSDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HVSDocument.h; sourceTree = "<group>"; };
+		2EEBA41716875CA5004EC063 /* HVSDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HVSDocument.m; sourceTree = "<group>"; };
+		2EEBA41A16875CA5004EC063 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HVSDocument.xib; sourceTree = "<group>"; };
+		2EEBA41D16875CA6004EC063 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2EEBA42416875D19004EC063 /* HVSCellDna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVSCellDna.h; sourceTree = "<group>"; };
+		2EEBA42516875D19004EC063 /* HVSCellDna.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVSCellDna.m; sourceTree = "<group>"; };
+		2EEBA42B168774BE004EC063 /* HVSPopulationOfDna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVSPopulationOfDna.h; sourceTree = "<group>"; };
+		2EEBA42C168774BE004EC063 /* HVSPopulationOfDna.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVSPopulationOfDna.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EEBA3FD16875CA5004EC063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EEBA40516875CA5004EC063 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EEBA3F516875CA5004EC063 = {
+			isa = PBXGroup;
+			children = (
+				2EEBA40A16875CA5004EC063 /* iDNA */,
+				2EEBA40316875CA5004EC063 /* Frameworks */,
+				2EEBA40116875CA5004EC063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EEBA40116875CA5004EC063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EEBA40016875CA5004EC063 /* iDNA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EEBA40316875CA5004EC063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EEBA40416875CA5004EC063 /* Cocoa.framework */,
+				2EEBA40616875CA5004EC063 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EEBA40616875CA5004EC063 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EEBA40716875CA5004EC063 /* AppKit.framework */,
+				2EEBA40816875CA5004EC063 /* CoreData.framework */,
+				2EEBA40916875CA5004EC063 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2EEBA40A16875CA5004EC063 /* iDNA */ = {
+			isa = PBXGroup;
+			children = (
+				2EEBA42416875D19004EC063 /* HVSCellDna.h */,
+				2EEBA42516875D19004EC063 /* HVSCellDna.m */,
+				2EEBA42B168774BE004EC063 /* HVSPopulationOfDna.h */,
+				2EEBA42C168774BE004EC063 /* HVSPopulationOfDna.m */,
+				2EEBA41616875CA5004EC063 /* HVSDocument.h */,
+				2EEBA41716875CA5004EC063 /* HVSDocument.m */,
+				2EEBA41916875CA5004EC063 /* HVSDocument.xib */,
+				2EEBA41C16875CA6004EC063 /* MainMenu.xib */,
+				2E78307E16BE6AD7000A5DEF /* HVSGenerateWindowController.h */,
+				2E78307F16BE6AD7000A5DEF /* HVSGenerateWindowController.m */,
+				2E78308516BE843B000A5DEF /* HVSGenerateWindowController.xib */,
+				2EEBA40B16875CA5004EC063 /* Supporting Files */,
+			);
+			path = iDNA;
+			sourceTree = "<group>";
+		};
+		2EEBA40B16875CA5004EC063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EE1D4B216BD3157007B91F8 /* Localizable.strings */,
+				2EEBA40C16875CA5004EC063 /* iDNA-Info.plist */,
+				2EEBA40D16875CA5004EC063 /* InfoPlist.strings */,
+				2EEBA41016875CA5004EC063 /* main.m */,
+				2EEBA41216875CA5004EC063 /* iDNA-Prefix.pch */,
+				2EEBA41316875CA5004EC063 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EEBA3FF16875CA5004EC063 /* iDNA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EEBA42116875CA6004EC063 /* Build configuration list for PBXNativeTarget "iDNA" */;
+			buildPhases = (
+				2EEBA3FC16875CA5004EC063 /* Sources */,
+				2EEBA3FD16875CA5004EC063 /* Frameworks */,
+				2EEBA3FE16875CA5004EC063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDNA;
+			productName = iDNA;
+			productReference = 2EEBA40016875CA5004EC063 /* iDNA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EEBA3F716875CA5004EC063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HVS;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "VladIslav Khazov";
+			};
+			buildConfigurationList = 2EEBA3FA16875CA5004EC063 /* Build configuration list for PBXProject "iDNA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+			);
+			mainGroup = 2EEBA3F516875CA5004EC063;
+			productRefGroup = 2EEBA40116875CA5004EC063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EEBA3FF16875CA5004EC063 /* iDNA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EEBA3FE16875CA5004EC063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EEBA40F16875CA5004EC063 /* InfoPlist.strings in Resources */,
+				2EEBA41516875CA5004EC063 /* Credits.rtf in Resources */,
+				2EEBA41B16875CA5004EC063 /* HVSDocument.xib in Resources */,
+				2EEBA41E16875CA6004EC063 /* MainMenu.xib in Resources */,
+				2EE1D4B016BD3157007B91F8 /* Localizable.strings in Resources */,
+				2E78308316BE843B000A5DEF /* HVSGenerateWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EEBA3FC16875CA5004EC063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EEBA41116875CA5004EC063 /* main.m in Sources */,
+				2EEBA41816875CA5004EC063 /* HVSDocument.m in Sources */,
+				2EEBA42616875D19004EC063 /* HVSCellDna.m in Sources */,
+				2EEBA42D168774BE004EC063 /* HVSPopulationOfDna.m in Sources */,
+				2E78308116BE6AD7000A5DEF /* HVSGenerateWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2E78308516BE843B000A5DEF /* HVSGenerateWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E78308416BE843B000A5DEF /* en */,
+				2E78308616BE8443000A5DEF /* ru */,
+			);
+			name = HVSGenerateWindowController.xib;
+			sourceTree = "<group>";
+		};
+		2EE1D4B216BD3157007B91F8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EE1D4B116BD3157007B91F8 /* en */,
+				2EE1D4B316BD315A007B91F8 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2EEBA40D16875CA5004EC063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EEBA40E16875CA5004EC063 /* en */,
+				2E7704F816BD281F00CCBDF3 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2EEBA41316875CA5004EC063 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EEBA41416875CA5004EC063 /* en */,
+				2E7704F916BD281F00CCBDF3 /* ru */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2EEBA41916875CA5004EC063 /* HVSDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EEBA41A16875CA5004EC063 /* en */,
+				2E7704F616BD281F00CCBDF3 /* ru */,
+			);
+			name = HVSDocument.xib;
+			sourceTree = "<group>";
+		};
+		2EEBA41C16875CA6004EC063 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EEBA41D16875CA6004EC063 /* en */,
+				2E7704F716BD281F00CCBDF3 /* ru */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EEBA41F16875CA6004EC063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2EEBA42016875CA6004EC063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2EEBA42216875CA6004EC063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDNA/iDNA-Prefix.pch";
+				INFOPLIST_FILE = "iDNA/iDNA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2EEBA42316875CA6004EC063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDNA/iDNA-Prefix.pch";
+				INFOPLIST_FILE = "iDNA/iDNA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EEBA3FA16875CA5004EC063 /* Build configuration list for PBXProject "iDNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EEBA41F16875CA6004EC063 /* Debug */,
+				2EEBA42016875CA6004EC063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EEBA42116875CA6004EC063 /* Build configuration list for PBXNativeTarget "iDNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EEBA42216875CA6004EC063 /* Debug */,
+				2EEBA42316875CA6004EC063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EEBA3F716875CA5004EC063 /* Project object */;
+}
