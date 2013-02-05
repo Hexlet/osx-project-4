@@ -10,6 +10,7 @@
 #import "Cell.h"
 #import "Population.h"
 #import "PreferencesController.h"
+#import "RandomWindowController.h"
 
 @implementation AppDelegate
 
@@ -69,10 +70,31 @@
 
 - (IBAction)startEvolution:(id)sender
 {
+    randomPanel = [[RandomWindowController alloc] initWithWindowNibName:@"RandomWindowController"];
+    
+    [NSApp beginSheet: [randomPanel window]
+       modalForWindow: [self window]
+        modalDelegate: randomPanel
+       didEndSelector: @selector(sheetDidEnd:returnCode:contextInfo:)
+          contextInfo: nil];
+
+    [NSApp runModalForWindow: [randomPanel window]];
+
+    [NSApp endSheet: [randomPanel window]];
+    //[[randomPanel window] orderOut: self];
+    
+    /*
     [self setStateOfUIElements:FALSE];
 
     [self performSelectorInBackground:@selector(evolutionJob) withObject:nil];
+    */
+}
+
+- (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+{
+    NSLog(@"finish");
     
+    [sheet orderOut:self];
 }
 
 -(void)evolutionJob

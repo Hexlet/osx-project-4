@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FA03ADBA16BBF68A001FD807 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03ADB916BBF68A001FD807 /* PreferencesController.m */; };
+		FA40EB4C16C12A5A00DE3FB2 /* RandomWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA40EB4A16C12A5A00DE3FB2 /* RandomWindowController.m */; };
+		FA40EB4E16C12A9E00DE3FB2 /* RandomWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA40EB5016C12A9E00DE3FB2 /* RandomWindowController.xib */; };
+		FA40EB5816C13F7000DE3FB2 /* MouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA40EB5716C13F7000DE3FB2 /* MouseView.m */; };
 		FA43D70616AFDFBD00CDECCF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA43D70516AFDFBD00CDECCF /* Cocoa.framework */; };
 		FA43D71016AFDFBD00CDECCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA43D70E16AFDFBD00CDECCF /* InfoPlist.strings */; };
 		FA43D71216AFDFBD00CDECCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA43D71116AFDFBD00CDECCF /* main.m */; };
@@ -22,6 +25,11 @@
 /* Begin PBXFileReference section */
 		FA03ADB816BBF68A001FD807 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		FA03ADB916BBF68A001FD807 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		FA40EB4916C12A5A00DE3FB2 /* RandomWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomWindowController.h; sourceTree = "<group>"; };
+		FA40EB4A16C12A5A00DE3FB2 /* RandomWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomWindowController.m; sourceTree = "<group>"; };
+		FA40EB5116C12AA000DE3FB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RandomWindowController.xib; sourceTree = "<group>"; };
+		FA40EB5616C13F7000DE3FB2 /* MouseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseView.h; sourceTree = "<group>"; };
+		FA40EB5716C13F7000DE3FB2 /* MouseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseView.m; sourceTree = "<group>"; };
 		FA43D70116AFDFBD00CDECCF /* iDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA43D70516AFDFBD00CDECCF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FA43D70816AFDFBD00CDECCF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -58,6 +66,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA40EB5416C13E7C00DE3FB2 /* RandomPanel */ = {
+			isa = PBXGroup;
+			children = (
+				FA40EB4916C12A5A00DE3FB2 /* RandomWindowController.h */,
+				FA40EB4A16C12A5A00DE3FB2 /* RandomWindowController.m */,
+				FA40EB5016C12A9E00DE3FB2 /* RandomWindowController.xib */,
+				FA40EB5616C13F7000DE3FB2 /* MouseView.h */,
+				FA40EB5716C13F7000DE3FB2 /* MouseView.m */,
+			);
+			name = RandomPanel;
+			sourceTree = "<group>";
+		};
+		FA40EB5516C13E9D00DE3FB2 /* DNA */ = {
+			isa = PBXGroup;
+			children = (
+				FA43D72216AFE04500CDECCF /* Cell.h */,
+				FA43D72316AFE04500CDECCF /* Cell.m */,
+				FA43D72416AFE04500CDECCF /* Population.h */,
+				FA43D72516AFE04500CDECCF /* Population.m */,
+			);
+			name = DNA;
+			sourceTree = "<group>";
+		};
 		FA43D6F616AFDFBD00CDECCF = {
 			isa = PBXGroup;
 			children = (
@@ -97,14 +128,12 @@
 		FA43D70B16AFDFBD00CDECCF /* iDNA */ = {
 			isa = PBXGroup;
 			children = (
+				FA40EB5516C13E9D00DE3FB2 /* DNA */,
+				FA40EB5416C13E7C00DE3FB2 /* RandomPanel */,
 				FA03ADB816BBF68A001FD807 /* PreferencesController.h */,
 				FA03ADB916BBF68A001FD807 /* PreferencesController.m */,
 				FA43D71716AFDFBD00CDECCF /* AppDelegate.h */,
 				FA43D71816AFDFBD00CDECCF /* AppDelegate.m */,
-				FA43D72216AFE04500CDECCF /* Cell.h */,
-				FA43D72316AFE04500CDECCF /* Cell.m */,
-				FA43D72416AFE04500CDECCF /* Population.h */,
-				FA43D72516AFE04500CDECCF /* Population.m */,
 				FA43D71A16AFDFBD00CDECCF /* MainMenu.xib */,
 				FA43D72F16AFE45100CDECCF /* Localizable.strings */,
 				FA43D70C16AFDFBD00CDECCF /* Supporting Files */,
@@ -180,6 +209,7 @@
 				FA43D71616AFDFBD00CDECCF /* Credits.rtf in Resources */,
 				FA43D71C16AFDFBD00CDECCF /* MainMenu.xib in Resources */,
 				FA43D72D16AFE45100CDECCF /* Localizable.strings in Resources */,
+				FA40EB4E16C12A9E00DE3FB2 /* RandomWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,12 +225,22 @@
 				FA43D72616AFE04500CDECCF /* Cell.m in Sources */,
 				FA43D72716AFE04500CDECCF /* Population.m in Sources */,
 				FA03ADBA16BBF68A001FD807 /* PreferencesController.m in Sources */,
+				FA40EB4C16C12A5A00DE3FB2 /* RandomWindowController.m in Sources */,
+				FA40EB5816C13F7000DE3FB2 /* MouseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FA40EB5016C12A9E00DE3FB2 /* RandomWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA40EB5116C12AA000DE3FB2 /* en */,
+			);
+			name = RandomWindowController.xib;
+			sourceTree = "<group>";
+		};
 		FA43D70E16AFDFBD00CDECCF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

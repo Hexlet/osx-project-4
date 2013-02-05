@@ -10,9 +10,11 @@
 
 @class Cell;
 @class PreferencesController;
+@class RandomWindowController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     PreferencesController *preferences;
+    RandomWindowController *randomPanel;
     
     NSInteger populationSize;
     NSInteger DNALength;
@@ -23,6 +25,7 @@
 @property Cell* DNA; // goal DNA
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSWindow *randomPanel;
 @property (weak) IBOutlet NSTextField *populationSizeTextField;
 @property (weak) IBOutlet NSTextField *DNALengthTextField;
 @property (weak) IBOutlet NSTextField *mutationRateTextField;
