@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  iDNA
+
+  Created by Admin on 04.02.13.
+  Copyright (c) 2013 Kabest. All rights reserved.
+*/
+
+"IDNA_IS_RUNNING_TITLE"     = "iDNA is running...";
+"IDNA_TITLE"                = "iDNA";
+"EXIT_TITLE"                = "Quit iDNA?";
+"EXIT_TEXT"                 = "Evolution is in progress! Do you really want to quit iDNA?";
+"BUTTON_YES"                = "Yes";
+"BUTTON_NO"                 = "No";
+"LOAD_TITLE"                = "Load DNA from file?";
+"LOAD_TEXT"                 = "Do you really want to load DNA from file?";
+"SAVE_TITLE"                = "Save DNA to file?";
+"SAVE_TEXT"                 = "Do you really want to save DNA to file?";
