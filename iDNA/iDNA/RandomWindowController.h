@@ -16,4 +16,6 @@
 
 - (IBAction)onExit:(id)sender;
 
+- (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
+
 @end

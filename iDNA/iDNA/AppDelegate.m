@@ -37,6 +37,7 @@
         preferences = [[PreferencesController alloc] init];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDNAChange:) name:DNAChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleFinishRandomGeneration:) name:@"FinishRandomGeneration" object:nil];
         
         _DNA = [[Cell alloc] init];
         [self addObserver:self forKeyPath:@"populationSize" options:0 context:nil];
@@ -79,22 +80,20 @@
           contextInfo: nil];
 
     [NSApp runModalForWindow: [randomPanel window]];
-
     [NSApp endSheet: [randomPanel window]];
-    //[[randomPanel window] orderOut: self];
-    
-    /*
-    [self setStateOfUIElements:FALSE];
-
-    [self performSelectorInBackground:@selector(evolutionJob) withObject:nil];
-    */
 }
 
-- (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+-(void)handleFinishRandomGeneration:(NSNotification*)notification
 {
-    NSLog(@"finish");
+    NSLog(@"finish random generation");
+
+    NSNumber *number = [[notification userInfo] objectForKey: @"random"];
+
+    // абсолютно ненужное действие, но требуется по условиям задания
+    srandom(number);
     
-    [sheet orderOut:self];
+    [self setStateOfUIElements:FALSE];
+    [self performSelectorInBackground:@selector(evolutionJob) withObject:nil];
 }
 
 -(void)evolutionJob
@@ -108,7 +107,7 @@
     paused = NO;
 
     while (true) {
-        [_generationLabel setStringValue:[NSString stringWithFormat:@"Generation: %d", i]];
+        [_generationLabel setStringValue:[NSString stringWithFormat:NSLocalizedString(@"GENERATION", ""), i]];
         
         evolutionResult = [population evolution:[[self valueForKey:@"mutationRate"] intValue]];
         if (bestMatch > evolutionResult) {

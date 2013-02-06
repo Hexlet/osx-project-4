@@ -5,3 +5,4 @@
 "ERROR_SAVE" = "Error save file";
 "ERROR_OPEN" = "Error open file";
 "BTN_CLOSE" = "Close";
+"GENERATION" = "Generation: %d";

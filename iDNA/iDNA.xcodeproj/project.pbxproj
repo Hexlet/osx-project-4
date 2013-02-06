@@ -52,6 +52,7 @@
 		FA43D72A16AFE16F00CDECCF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
 		FA43D72E16AFE45100CDECCF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA43D73016AFE45600CDECCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAF14E1816C26DCC00A50E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/RandomWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +238,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA40EB5116C12AA000DE3FB2 /* en */,
+				FAF14E1816C26DCC00A50E9A /* ru */,
 			);
 			name = RandomWindowController.xib;
 			sourceTree = "<group>";

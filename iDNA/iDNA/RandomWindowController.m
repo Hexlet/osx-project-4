@@ -24,8 +24,7 @@
 {
     [super windowDidLoad];
     
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc addObserver:self selector:@selector(handleRandomChange:) name:@"RandomGeneration" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleRandomChange:) name:@"RandomGeneration" object:nil];
 }
 
 - (IBAction)onExit:(id)sender
@@ -44,5 +43,14 @@
         [NSApp stopModal];
     }
 }
+
+- (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+{
+    [sheet orderOut:self];
+    
+    NSDictionary *d = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:_random] forKey:@"random"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"FinishRandomGeneration" object:self userInfo:d];
+}
+
 
 @end

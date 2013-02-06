@@ -32,9 +32,8 @@
     int rand = (realPoint.x - p.x)*(realPoint.y - p.y);
     p = NSMakePoint(realPoint.x, realPoint.y);
     
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     NSDictionary *d = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:rand] forKey:@"random"];
-    [nc postNotificationName:@"RandomGeneration" object:self userInfo:d];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RandomGeneration" object:self userInfo:d];
 }
 
 - (BOOL)acceptsFirstMouse:(NSEvent *)theEvent
