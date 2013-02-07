@@ -16,7 +16,6 @@
 		DA79D9FF1678CB8800F8AC5C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DA79D9FD1678CB8800F8AC5C /* Credits.rtf */; };
 		DA79DA021678CB8800F8AC5C /* YKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79DA011678CB8800F8AC5C /* YKAppDelegate.m */; };
 		DA79DA051678CB8800F8AC5C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA79DA031678CB8800F8AC5C /* MainMenu.xib */; };
-		DAB4EC4B16AEDDFD0003B00F /* YKTrackingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4EC4A16AEDDFD0003B00F /* YKTrackingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +37,6 @@
 		DA79DA001678CB8800F8AC5C /* YKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppDelegate.h; sourceTree = "<group>"; };
 		DA79DA011678CB8800F8AC5C /* YKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAppDelegate.m; sourceTree = "<group>"; };
 		DA79DA041678CB8800F8AC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		DAB4EC4916AEDDFD0003B00F /* YKTrackingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKTrackingView.h; sourceTree = "<group>"; };
-		DAB4EC4A16AEDDFD0003B00F /* YKTrackingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKTrackingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +97,6 @@
 				DA79DA031678CB8800F8AC5C /* MainMenu.xib */,
 				DA13D7A1167F81E100FBAB4F /* YKDNA.h */,
 				DA13D7A2167F81E100FBAB4F /* YKDNA.m */,
-				DAB4EC4916AEDDFD0003B00F /* YKTrackingView.h */,
-				DAB4EC4A16AEDDFD0003B00F /* YKTrackingView.m */,
 				DA79D9F51678CB8800F8AC5C /* Supporting Files */,
 			);
 			path = iDNA;
@@ -190,7 +185,6 @@
 				DA79DA021678CB8800F8AC5C /* YKAppDelegate.m in Sources */,
 				DA13D7A3167F81E100FBAB4F /* YKDNA.m in Sources */,
 				DA15F3CD16A7110E003898FF /* YKDNAPreferences.m in Sources */,
-				DAB4EC4B16AEDDFD0003B00F /* YKTrackingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

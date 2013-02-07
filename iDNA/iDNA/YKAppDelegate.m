@@ -63,6 +63,9 @@
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(evolutionIterationDidFinishNotification:) name:EVOLUTION_ITERATION_DID_FINISH_NOTIFICATION_NAME object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateValuesNotification:) name:UPDATE_VALUES_NOTIFICATION object:nil];
+
+//    [self.window setAcceptsMouseMovedEvents:NO];
+    [randomizationPanel setPreventsApplicationTerminationWhenModal:NO];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
@@ -73,12 +76,6 @@
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
     if (self.isBusy) {
-/*        NSAlert *alert = [[NSAlert alertWithMessageText:NSLocalizedString(@"Do you want to quit iDNA?", @"Quit app alert title format")
-                                          defaultButton:NSLocalizedString(@"Yes", @"Quit app alert OK button")
-                                        alternateButton:NSLocalizedString(@"No", @"Quit app alert Cancel button")
-                                            otherButton:nil
-                              informativeTextWithFormat:NSLocalizedString(@"Calculation is in progress. Do you want to close this window and quit iDNA?", @"Quit app alert description")]];
-*/
         NSInteger alertResult = NSRunAlertPanel(NSLocalizedString(@"Do you want to quit iDNA?", @"Quit app alert title format"),
                                                 NSLocalizedString(@"Calculation is in progress. Do you want to close this window and quit iDNA?", @"Quit app alert description"),
                                                 NSLocalizedString(@"Yes", @"Quit app alert OK button"),
@@ -330,7 +327,8 @@
         prefs.lastSelectedFile = openPanel.URL;
 
         NSFileManager *fileManager = [NSFileManager defaultManager];
-        if ([fileManager fileExistsAtPath:[openPanel.URL absoluteString]]) {
+        NSString *filePath = [openPanel.URL path];
+        if ([fileManager fileExistsAtPath:filePath]) {
             [self loadGoalDNAWithURL:openPanel.URL];
         }
     }];
@@ -363,10 +361,11 @@
     if (!stringContainsOnlyValidChars) {
         // Show alert and return
         NSRunAlertPanel(NSLocalizedString(@"Incorrect characters found", @"Alert title when goal DNA contains invalid characters"),
-                        NSLocalizedString(@"Opened file contains characters that can't be interpreted as valid nucleotides", @"Alert description when goal DNA contains invalid characters"),
+                        NSLocalizedString(@"Opened file contains characters that can't be interpreted as valid nucleotides. Valid characters are: %@", @"Alert description when goal DNA contains invalid characters"),
                         NSLocalizedString(@"OK", @"OK Button"),
                         nil,
-                        nil);
+                        nil,
+                        [[YKDNA dnaLetters] componentsJoinedByString:@" "]);
         return;
     }
 

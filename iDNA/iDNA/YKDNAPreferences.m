@@ -119,7 +119,10 @@ static YKDNAPreferences *_sharedPreferences = nil;
 
 - (NSURL *)lastOpenDirectory
 {
-    return [NSURL fileURLWithPath:[[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_DIRECTORY_KEY]];
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_DIRECTORY_KEY])
+        return [NSURL fileURLWithPath:[[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_DIRECTORY_KEY]];
+    else
+        return nil;
 }
 
 - (void)setLastOpenDirectory:(NSURL *)lastOpenDirectory
@@ -130,7 +133,10 @@ static YKDNAPreferences *_sharedPreferences = nil;
 
 - (NSURL *)lastSelectedFile
 {
-    return [NSURL fileURLWithPath:[[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_FILE_KEY]];
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_FILE_KEY])
+        return [NSURL fileURLWithPath:[[NSUserDefaults standardUserDefaults] stringForKey:YK_PREFERENCES_LAST_OPEN_FILE_KEY]];
+    else
+        return nil;
 }
 
 - (void)setLastSelectedFile:(NSURL *)lastSelectedFile

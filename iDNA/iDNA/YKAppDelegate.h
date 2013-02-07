@@ -17,6 +17,11 @@
     IBOutlet NSTextField *goalDNATextField;
 
     IBOutlet NSProgressIndicator *evolutionProgressIndicator;
+    IBOutlet NSPanel *randomizationPanel;
+
+    NSUInteger randomizerCapacity;
+    NSMutableArray *randomNumbers;
+    NSPoint mousePoint;
 }
 
 @property (assign) IBOutlet NSWindow *window;
