@@ -1,0 +1,14 @@
+/* 
+  Localization.strings
+  iDNA
+
+  Created by Alexander on 06.02.13.
+  Copyright (c) 2013 Alexander. All rights reserved.
+*/
+
+"GENERATION" = "Generation";
+"BEST_INDIVIDUAL" = "Best individual match";
+"CLOSE_MESSAGE_TITLE" = "Do you wand close application?";
+"YES" = "Yes";
+"NO" = "No";
+"CANCEL" = "Cancel";

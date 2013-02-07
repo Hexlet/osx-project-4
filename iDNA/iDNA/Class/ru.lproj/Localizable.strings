@@ -1,0 +1,14 @@
+/* 
+  Localization.strings
+  iDNA
+
+  Created by Alexander on 06.02.13.
+  Copyright (c) 2013 Alexander. All rights reserved.
+*/
+
+"GENERATION" = "Поколений";
+"BEST_INDIVIDUAL" = "Найлучшая особь";
+"CLOSE_MESSAGE_TITLE" = "Вы действидельно хотите закрыть приложение?";
+"YES" = "ДА";
+"NO" = "Нет";
+"CANCEL" = "Отмена";
