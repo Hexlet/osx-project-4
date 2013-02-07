@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PreferencesController.h"
+#import "RandomGenWindowController.h"
 
 #define EVOLUTION_DONE_NOTIFICATION @"iDNAEvolutionDoneNotification"
 
@@ -19,6 +20,7 @@
     self.isRunning = NO;
     // подпишемся на событие обокончании очередной эволюции
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(evolutionDone:) name:EVOLUTION_DONE_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRandomNumberReady:) name:IDNARandomNumberReady object:nil];
 }
 
 -(id)init {
@@ -51,6 +53,7 @@
     [self removeObserver:self forKeyPath:@"mutationRate"];
     [self removeObserver:self forKeyPath:@"minimumHammingDistance"];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:EVOLUTION_DONE_NOTIFICATION object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:IDNARandomNumberReady object:nil];
 }
 
 -(void)doEvolutionThread {
@@ -163,26 +166,49 @@
 -(IBAction)startEvolutionButtonClicked:(id)sender {
     // при первом запуске сбросим номер поколения и создадим популяцию
     if (self.isFirstRun) {
-        self.generation = 0;
-        self.bestIndividualMatch = 0;
-        NSMutableArray *arr = [NSMutableArray arrayWithCapacity:self.populationSize];
-        for (int i = 0; i < self.populationSize; i++) {
-            Cell *dna = [[Cell alloc] initWithCapacity:self.dnaLength];
-            [arr addObject:dna];
-        }
-        self.population = arr;
+        _randomWindow = [[RandomGenWindowController alloc] initWithWindowNibName:@"RandomGenWindowController"];
+        
+        [NSApp beginSheet:[_randomWindow window] modalForWindow:[self window] modalDelegate:_randomWindow didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:nil];
+        [NSApp runModalForWindow:[_randomWindow window]];
+        [NSApp endSheet:[_randomWindow window]];
+        [[_randomWindow window] orderOut:self];
     }
-    // запускаем
-    self.isRunning = YES;
-    self.isFirstRun = NO;
-    self.window.title = NSLocalizedString(@"IDNA_IS_RUNNING_TITLE", @"iDNA is running...");
-    [self doEvolutionThread];
+    else
+        [self startEvolution];
 }
 
 -(IBAction)pauseEvolutionButtonClicked:(id)sender {
     // приостанавливаем, но isFirstRun не меняем, он сбросится, если изменим параметры эволюции
     self.isRunning = NO;
     self.window.title = NSLocalizedString(@"IDNA_TITLE", @"iDNA");
+}
+
+-(void)onRandomNumberReady:(NSNotification*)notification {
+    NSNumber *rndNumber = [[notification userInfo] objectForKey:IDNARandomNumber];
+    srandom([rndNumber unsignedIntValue]);
+    
+    [self initEvolution];
+    [self startEvolution];
+}
+
+-(void)initEvolution {
+    // инициализируем
+    self.generation = 0;
+    self.bestIndividualMatch = 0;
+    NSMutableArray *arr = [NSMutableArray arrayWithCapacity:self.populationSize];
+    for (int i = 0; i < self.populationSize; i++) {
+        Cell *dna = [[Cell alloc] initWithCapacity:self.dnaLength];
+        [arr addObject:dna];
+    }
+    self.population = arr;
+}
+
+-(void)startEvolution {
+    // запускаем
+    self.isRunning = YES;
+    self.isFirstRun = NO;
+    self.window.title = NSLocalizedString(@"IDNA_IS_RUNNING_TITLE", @"iDNA is running...");
+    [self doEvolutionThread];
 }
 
 -(IBAction)loadGoalDNAButtonClicked:(id)sender {

@@ -16,3 +16,4 @@
 "LOAD_TEXT"                 = "Do you really want to load DNA from file?";
 "SAVE_TITLE"                = "Save DNA to file?";
 "SAVE_TEXT"                 = "Do you really want to save DNA to file?";
+"MOVE_HERE"                 = "Pleasemake some mouse moves inside this window...";

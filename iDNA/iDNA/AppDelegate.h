@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "Cell.h"
 #import "PreferencesController.h"
+#import "RandomGenWindowController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -23,6 +24,7 @@
 @property NSInteger bestIndividualMatch;
 @property NSMutableArray *population;
 @property PreferencesController *preferences;
+@property RandomGenWindowController *randomWindow;
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *populationSizeEdit;
@@ -40,5 +42,8 @@
 -(IBAction)pauseEvolutionButtonClicked:(id)sender;
 -(IBAction)saveGoalDNAButtonClicked:(id)sender;
 -(IBAction)loadGoalDNAButtonClicked:(id)sender;
+
+-(void)initEvolution;
+-(void)startEvolution;
 
 @end

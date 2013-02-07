@@ -10,6 +10,9 @@
 		840B888B16C021A8005F51F9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840B888916C021A8005F51F9 /* MainMenu.xib */; };
 		840B88AE16C023BE005F51F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 840B88B016C023BE005F51F9 /* Localizable.strings */; };
 		840B88B416C02BDE005F51F9 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B88B316C02BDE005F51F9 /* PreferencesController.m */; };
+		840B88BB16C2C964005F51F9 /* RandomGenWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B88B916C2C964005F51F9 /* RandomGenWindowController.m */; };
+		840B88BD16C2C980005F51F9 /* RandomGenWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840B88BF16C2C980005F51F9 /* RandomGenWindowController.xib */; };
+		840B88C316C3FF8F005F51F9 /* RandomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B88C216C3FF8F005F51F9 /* RandomView.m */; };
 		84A4C9F71686C717008C4C17 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4C9F61686C717008C4C17 /* Cocoa.framework */; };
 		84A4CA011686C717008C4C17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84A4C9FF1686C717008C4C17 /* InfoPlist.strings */; };
 		84A4CA031686C717008C4C17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4CA021686C717008C4C17 /* main.m */; };
@@ -25,6 +28,12 @@
 		840B88B116C023C9005F51F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		840B88B216C02BDE005F51F9 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		840B88B316C02BDE005F51F9 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		840B88B816C2C964005F51F9 /* RandomGenWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomGenWindowController.h; path = ../RandomGenWindowController.h; sourceTree = "<group>"; };
+		840B88B916C2C964005F51F9 /* RandomGenWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomGenWindowController.m; path = ../RandomGenWindowController.m; sourceTree = "<group>"; };
+		840B88BE16C2C980005F51F9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/RandomGenWindowController.xib; sourceTree = "<group>"; };
+		840B88C016C2C986005F51F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RandomGenWindowController.xib; sourceTree = "<group>"; };
+		840B88C116C3FF8F005F51F9 /* RandomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomView.h; sourceTree = "<group>"; };
+		840B88C216C3FF8F005F51F9 /* RandomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomView.m; sourceTree = "<group>"; };
 		843C2E0516C01202001FF4B9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		843C2E0616C01202001FF4B9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
 		84A4C9F21686C717008C4C17 /* iDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				84A4C9FC1686C717008C4C17 /* iDNA */,
-				84A4C9F51686C717008C4C17 /* Frameworks */,
 				84A4C9F31686C717008C4C17 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,9 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				84A4C9F61686C717008C4C17 /* Cocoa.framework */,
-				84A4C9F81686C717008C4C17 /* Other Frameworks */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		84A4C9F81686C717008C4C17 /* Other Frameworks */ = {
@@ -89,11 +97,15 @@
 				84A4C9FB1686C717008C4C17 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		84A4C9FC1686C717008C4C17 /* iDNA */ = {
 			isa = PBXGroup;
 			children = (
+				840B88B816C2C964005F51F9 /* RandomGenWindowController.h */,
+				840B88B916C2C964005F51F9 /* RandomGenWindowController.m */,
+				840B88BF16C2C980005F51F9 /* RandomGenWindowController.xib */,
 				840B888916C021A8005F51F9 /* MainMenu.xib */,
 				84A4CA171686E2B6008C4C17 /* Cell.h */,
 				84A4CA181686E2B6008C4C17 /* Cell.m */,
@@ -102,6 +114,10 @@
 				840B88B216C02BDE005F51F9 /* PreferencesController.h */,
 				840B88B316C02BDE005F51F9 /* PreferencesController.m */,
 				84A4C9FD1686C717008C4C17 /* Supporting Files */,
+				840B88C116C3FF8F005F51F9 /* RandomView.h */,
+				840B88C216C3FF8F005F51F9 /* RandomView.m */,
+				84A4C9F81686C717008C4C17 /* Other Frameworks */,
+				84A4C9F51686C717008C4C17 /* Frameworks */,
 			);
 			path = iDNA;
 			sourceTree = "<group>";
@@ -176,6 +192,7 @@
 				84A4CA071686C717008C4C17 /* Credits.rtf in Resources */,
 				840B888B16C021A8005F51F9 /* MainMenu.xib in Resources */,
 				840B88AE16C023BE005F51F9 /* Localizable.strings in Resources */,
+				840B88BD16C2C980005F51F9 /* RandomGenWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +207,8 @@
 				84A4CA0A1686C717008C4C17 /* AppDelegate.m in Sources */,
 				84A4CA191686E2B6008C4C17 /* Cell.m in Sources */,
 				840B88B416C02BDE005F51F9 /* PreferencesController.m in Sources */,
+				840B88BB16C2C964005F51F9 /* RandomGenWindowController.m in Sources */,
+				840B88C316C3FF8F005F51F9 /* RandomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +231,16 @@
 				840B88B116C023C9005F51F9 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		840B88BF16C2C980005F51F9 /* RandomGenWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840B88BE16C2C980005F51F9 /* ru */,
+				840B88C016C2C986005F51F9 /* en */,
+			);
+			name = RandomGenWindowController.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		84A4C9FF1686C717008C4C17 /* InfoPlist.strings */ = {

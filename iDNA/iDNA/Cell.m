@@ -25,7 +25,6 @@ static NSArray *dnaChars = nil;
     capacity = [[NSNumber numberWithInteger:val]intValue];
     dna = [NSMutableArray arrayWithCapacity:capacity];
     
-    srandom([[NSNumber numberWithLong:time(NULL)]intValue]);
     for (int i = 0; i < capacity; i++) {
         int r = arc4random() % 4;
         [dna addObject: [[Cell dnaChars] objectAtIndex: r]];
@@ -66,7 +65,6 @@ static NSArray *dnaChars = nil;
         // в массиве changed будем хранить позиции мутировавших генов
         NSMutableArray* changed = [NSMutableArray arrayWithCapacity:capacity];
         int pos;
-        srandom([[NSNumber numberWithLong:time(NULL)]intValue]);
         for (int i = 0; i < percentage; i++) {
             // ищем позицию еще не мутировавшего гена
             do {
@@ -127,5 +125,7 @@ static NSArray *dnaChars = nil;
     [newDNA setStringValue:newDNAString];
     return newDNA;
 }
+
+
 
 @end
