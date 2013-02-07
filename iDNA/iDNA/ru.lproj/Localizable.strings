@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  iDNA
+
+  Created by Admin on 04.02.13.
+  Copyright (c) 2013 Kabest. All rights reserved.
+*/
+
+"IDNA_IS_RUNNING_TITLE"     = "iDNA производит эволюцию...";
+"IDNA_TITLE"                = "iDNA";
+"EXIT_TITLE"                = "Выйти из iDNA?";
+"EXIT_TEXT"                 = "Производится эволюция! Вы действительно хотите выйти из iDNA?";
+"BUTTON_YES"                = "Да";
+"BUTTON_NO"                 = "Нет";
+"LOAD_TITLE"                = "Загрузить ДНК из файла?";
+"LOAD_TEXT"                 = "Вы действительно хотите загрузить цепочку ДНК из файла?";
+"SAVE_TITLE"                = "Сохранить ДНК в файл?";
+"SAVE_TEXT"                 = "Вы действительно хотите сохранить цепочку ДНК в файл?";
+"MOVE_HERE"                 = "Пожалуйста, поводите мышкой в этом окне...";
