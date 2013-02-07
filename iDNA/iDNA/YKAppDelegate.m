@@ -343,11 +343,36 @@
     if (!newGoalDnaString)
         return;
 
+    // Take only first 1000 characters if string is longer
     if (newGoalDnaString.length > 1000) {
+        newGoalDnaString = [newGoalDnaString substringToIndex:1000];
         return;
     }
 
     // Process file contents checking if characters belong to dnaLatters
+    NSCharacterSet *dnaCharset = [NSCharacterSet characterSetWithCharactersInString:[[YKDNA dnaLetters] componentsJoinedByString:@""]];
+    NSUInteger i;
+    BOOL stringContainsOnlyValidChars = YES;
+    for (i=0; i<newGoalDnaString.length; i++) {
+        if (![dnaCharset characterIsMember:[newGoalDnaString characterAtIndex:i]]) {
+            stringContainsOnlyValidChars = NO;
+            break;
+        }
+    }
+
+    if (!stringContainsOnlyValidChars) {
+        // Show alert and return
+        NSRunAlertPanel(NSLocalizedString(@"Incorrect characters found", @"Alert title when goal DNA contains invalid characters"),
+                        NSLocalizedString(@"Opened file contains characters that can't be interpreted as valid nucleotides", @"Alert description when goal DNA contains invalid characters"),
+                        NSLocalizedString(@"OK", @"OK Button"),
+                        nil,
+                        nil);
+        return;
+    }
+
+    // self.isFirstRun сбрасывается при изменении self.dnaLength, т. е. нет необходимости сбрасывать это свойство отдельно
+    self.dnaLength = newGoalDnaString.length;
+    self.goalDNA.dnaString = newGoalDnaString;
 }
 
 @end

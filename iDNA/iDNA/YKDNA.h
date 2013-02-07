@@ -14,6 +14,8 @@
 
 @property (retain) NSString *dnaString;
 
++ (NSArray *)dnaLetters;
+
 - (YKDNA *)initWithLength:(NSUInteger)length;
 
 - (NSInteger)hammingDistanceToDNA:(YKDNA *)aDNA;
