@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA13D7A3167F81E100FBAB4F /* YKDNA.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13D7A2167F81E100FBAB4F /* YKDNA.m */; };
 		DA15F3CD16A7110E003898FF /* YKDNAPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DA15F3CC16A7110E003898FF /* YKDNAPreferences.m */; };
-		DA192B0B16BAD58800D14FD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA192B0A16BAD58800D14FD3 /* Localizable.strings */; };
+		DA679A2516C4066C00416E98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA679A2716C4066C00416E98 /* Localizable.strings */; };
 		DA79D9EF1678CB8800F8AC5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA79D9EE1678CB8800F8AC5C /* Cocoa.framework */; };
 		DA79D9F91678CB8800F8AC5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA79D9F71678CB8800F8AC5C /* InfoPlist.strings */; };
 		DA79D9FB1678CB8800F8AC5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79D9FA1678CB8800F8AC5C /* main.m */; };
@@ -23,7 +23,11 @@
 		DA13D7A2167F81E100FBAB4F /* YKDNA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDNA.m; sourceTree = "<group>"; };
 		DA15F3CB16A7110E003898FF /* YKDNAPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDNAPreferences.h; sourceTree = "<group>"; };
 		DA15F3CC16A7110E003898FF /* YKDNAPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDNAPreferences.m; sourceTree = "<group>"; };
-		DA192B0A16BAD58800D14FD3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DA679A2616C4066C00416E98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA679A2816C4070700416E98 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DA679A2916C4070700416E98 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA679A2A16C4070800416E98 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DA679A2B16C4070800416E98 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA79D9EA1678CB8800F8AC5C /* iDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA79D9EE1678CB8800F8AC5C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DA79D9F11678CB8800F8AC5C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -110,7 +114,7 @@
 				DA79D9FA1678CB8800F8AC5C /* main.m */,
 				DA79D9FC1678CB8800F8AC5C /* iDNA-Prefix.pch */,
 				DA79D9FD1678CB8800F8AC5C /* Credits.rtf */,
-				DA192B0A16BAD58800D14FD3 /* Localizable.strings */,
+				DA679A2716C4066C00416E98 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,6 +155,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 			);
 			mainGroup = DA79D9DF1678CB8800F8AC5C;
 			productRefGroup = DA79D9EB1678CB8800F8AC5C /* Products */;
@@ -170,7 +175,7 @@
 				DA79D9F91678CB8800F8AC5C /* InfoPlist.strings in Resources */,
 				DA79D9FF1678CB8800F8AC5C /* Credits.rtf in Resources */,
 				DA79DA051678CB8800F8AC5C /* MainMenu.xib in Resources */,
-				DA192B0B16BAD58800D14FD3 /* Localizable.strings in Resources */,
+				DA679A2516C4066C00416E98 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,10 +196,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DA679A2716C4066C00416E98 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA679A2616C4066C00416E98 /* en */,
+				DA679A2B16C4070800416E98 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DA79D9F71678CB8800F8AC5C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DA79D9F81678CB8800F8AC5C /* en */,
+				DA679A2916C4070700416E98 /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -203,6 +218,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA79D9FE1678CB8800F8AC5C /* en */,
+				DA679A2A16C4070800416E98 /* ru */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -211,6 +227,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA79DA041678CB8800F8AC5C /* en */,
+				DA679A2816C4070700416E98 /* ru */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
