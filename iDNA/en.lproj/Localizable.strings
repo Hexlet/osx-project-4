@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  iDNA
+
+  Created by Igor Pavlov on 08.02.13.
+  Copyright (c) 2013 Igor Pavlov. All rights reserved.
+*/
+"CANCEL" = "Cancel";
+"QUIT_QUESTION" = "Do you really want to quit?";
+"RANDOMIZE" = "Please, move mouse for randomization.";

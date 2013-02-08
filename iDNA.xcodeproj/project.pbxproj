@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78096E8116C58C2600FCD2BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78096E8316C58C2600FCD2BF /* Localizable.strings */; };
+		78621305168A004B00D1E070 /* Cell+hybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 78621304168A004B00D1E070 /* Cell+hybrid.m */; };
+		78B136231688EC0400EBA2DB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B136221688EC0400EBA2DB /* Cocoa.framework */; };
+		78B1362D1688EC0400EBA2DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78B1362B1688EC0400EBA2DB /* InfoPlist.strings */; };
+		78B1362F1688EC0400EBA2DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B1362E1688EC0400EBA2DB /* main.m */; };
+		78B136331688EC0400EBA2DB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 78B136311688EC0400EBA2DB /* Credits.rtf */; };
+		78B136361688EC0400EBA2DB /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B136351688EC0400EBA2DB /* Document.m */; };
+		78B136391688EC0400EBA2DB /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B136371688EC0400EBA2DB /* Document.xib */; };
+		78B1363C1688EC0500EBA2DB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B1363A1688EC0500EBA2DB /* MainMenu.xib */; };
+		78B1363F1688EC0500EBA2DB /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78B1363D1688EC0500EBA2DB /* Document.xcdatamodeld */; };
+		78B13659168913CA00EBA2DB /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B13657168913CA00EBA2DB /* Cell.m */; };
+		78B1365A168913CA00EBA2DB /* Cell+mutator.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B13658168913CA00EBA2DB /* Cell+mutator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		78096E7D16C58B1F00FCD2BF /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/Document.xib; sourceTree = "<group>"; };
+		78096E7E16C58B1F00FCD2BF /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		78096E7F16C58B1F00FCD2BF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78096E8016C58B1F00FCD2BF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		78096E8216C58C2600FCD2BF /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		78096E8416C58C2C00FCD2BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		78621303168A004B00D1E070 /* Cell+hybrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cell+hybrid.h"; sourceTree = "<group>"; };
+		78621304168A004B00D1E070 /* Cell+hybrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cell+hybrid.m"; sourceTree = "<group>"; };
+		78B1361E1688EC0400EBA2DB /* iDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78B136221688EC0400EBA2DB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		78B136251688EC0400EBA2DB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		78B136261688EC0400EBA2DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		78B136271688EC0400EBA2DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		78B1362A1688EC0400EBA2DB /* iDNA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDNA-Info.plist"; sourceTree = "<group>"; };
+		78B1362C1688EC0400EBA2DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78B1362E1688EC0400EBA2DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		78B136301688EC0400EBA2DB /* iDNA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDNA-Prefix.pch"; sourceTree = "<group>"; };
+		78B136321688EC0400EBA2DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		78B136341688EC0400EBA2DB /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		78B136351688EC0400EBA2DB /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		78B136381688EC0400EBA2DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
+		78B1363E1688EC0500EBA2DB /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
+		78B13655168913CA00EBA2DB /* Cell+mutator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cell+mutator.h"; sourceTree = "<group>"; };
+		78B13656168913CA00EBA2DB /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		78B13657168913CA00EBA2DB /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		78B13658168913CA00EBA2DB /* Cell+mutator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cell+mutator.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78B1361B1688EC0400EBA2DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B136231688EC0400EBA2DB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78B136131688EC0400EBA2DB = {
+			isa = PBXGroup;
+			children = (
+				78B136281688EC0400EBA2DB /* iDNA */,
+				78B136211688EC0400EBA2DB /* Frameworks */,
+				78B1361F1688EC0400EBA2DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78B1361F1688EC0400EBA2DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78B1361E1688EC0400EBA2DB /* iDNA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78B136211688EC0400EBA2DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78B136221688EC0400EBA2DB /* Cocoa.framework */,
+				78B136241688EC0400EBA2DB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78B136241688EC0400EBA2DB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78B136251688EC0400EBA2DB /* AppKit.framework */,
+				78B136261688EC0400EBA2DB /* CoreData.framework */,
+				78B136271688EC0400EBA2DB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		78B136281688EC0400EBA2DB /* iDNA */ = {
+			isa = PBXGroup;
+			children = (
+				78B13656168913CA00EBA2DB /* Cell.h */,
+				78B13657168913CA00EBA2DB /* Cell.m */,
+				78B13655168913CA00EBA2DB /* Cell+mutator.h */,
+				78B13658168913CA00EBA2DB /* Cell+mutator.m */,
+				78621303168A004B00D1E070 /* Cell+hybrid.h */,
+				78621304168A004B00D1E070 /* Cell+hybrid.m */,
+				78B136341688EC0400EBA2DB /* Document.h */,
+				78B136351688EC0400EBA2DB /* Document.m */,
+				78096E8316C58C2600FCD2BF /* Localizable.strings */,
+				78B136371688EC0400EBA2DB /* Document.xib */,
+				78B1363A1688EC0500EBA2DB /* MainMenu.xib */,
+				78B1363D1688EC0500EBA2DB /* Document.xcdatamodeld */,
+				78B136291688EC0400EBA2DB /* Supporting Files */,
+			);
+			path = iDNA;
+			sourceTree = "<group>";
+		};
+		78B136291688EC0400EBA2DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78B1362A1688EC0400EBA2DB /* iDNA-Info.plist */,
+				78B1362B1688EC0400EBA2DB /* InfoPlist.strings */,
+				78B1362E1688EC0400EBA2DB /* main.m */,
+				78B136301688EC0400EBA2DB /* iDNA-Prefix.pch */,
+				78B136311688EC0400EBA2DB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78B1361D1688EC0400EBA2DB /* iDNA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78B136421688EC0500EBA2DB /* Build configuration list for PBXNativeTarget "iDNA" */;
+			buildPhases = (
+				78B1361A1688EC0400EBA2DB /* Sources */,
+				78B1361B1688EC0400EBA2DB /* Frameworks */,
+				78B1361C1688EC0400EBA2DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDNA;
+			productName = iDNA;
+			productReference = 78B1361E1688EC0400EBA2DB /* iDNA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78B136151688EC0400EBA2DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Igor Pavlov";
+			};
+			buildConfigurationList = 78B136181688EC0400EBA2DB /* Build configuration list for PBXProject "iDNA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+			);
+			mainGroup = 78B136131688EC0400EBA2DB;
+			productRefGroup = 78B1361F1688EC0400EBA2DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78B1361D1688EC0400EBA2DB /* iDNA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78B1361C1688EC0400EBA2DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B1362D1688EC0400EBA2DB /* InfoPlist.strings in Resources */,
+				78B136331688EC0400EBA2DB /* Credits.rtf in Resources */,
+				78B136391688EC0400EBA2DB /* Document.xib in Resources */,
+				78B1363C1688EC0500EBA2DB /* MainMenu.xib in Resources */,
+				78096E8116C58C2600FCD2BF /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78B1361A1688EC0400EBA2DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B1362F1688EC0400EBA2DB /* main.m in Sources */,
+				78B136361688EC0400EBA2DB /* Document.m in Sources */,
+				78B1363F1688EC0500EBA2DB /* Document.xcdatamodeld in Sources */,
+				78B13659168913CA00EBA2DB /* Cell.m in Sources */,
+				78B1365A168913CA00EBA2DB /* Cell+mutator.m in Sources */,
+				78621305168A004B00D1E070 /* Cell+hybrid.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78096E8316C58C2600FCD2BF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78096E8216C58C2600FCD2BF /* ru */,
+				78096E8416C58C2C00FCD2BF /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		78B1362B1688EC0400EBA2DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78B1362C1688EC0400EBA2DB /* en */,
+				78096E7F16C58B1F00FCD2BF /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		78B136311688EC0400EBA2DB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78B136321688EC0400EBA2DB /* en */,
+				78096E8016C58B1F00FCD2BF /* ru */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		78B136371688EC0400EBA2DB /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78B136381688EC0400EBA2DB /* en */,
+				78096E7D16C58B1F00FCD2BF /* ru */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		78B1363A1688EC0500EBA2DB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78096E7E16C58B1F00FCD2BF /* ru */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78B136401688EC0500EBA2DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		78B136411688EC0500EBA2DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		78B136431688EC0500EBA2DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDNA/iDNA-Prefix.pch";
+				INFOPLIST_FILE = "iDNA/iDNA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		78B136441688EC0500EBA2DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDNA/iDNA-Prefix.pch";
+				INFOPLIST_FILE = "iDNA/iDNA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78B136181688EC0400EBA2DB /* Build configuration list for PBXProject "iDNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B136401688EC0500EBA2DB /* Debug */,
+				78B136411688EC0500EBA2DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78B136421688EC0500EBA2DB /* Build configuration list for PBXNativeTarget "iDNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B136431688EC0500EBA2DB /* Debug */,
+				78B136441688EC0500EBA2DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		78B1363D1688EC0500EBA2DB /* Document.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				78B1363E1688EC0500EBA2DB /* Document.xcdatamodel */,
+			);
+			currentVersion = 78B1363E1688EC0500EBA2DB /* Document.xcdatamodel */;
+			path = Document.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 78B136151688EC0400EBA2DB /* Project object */;
+}
