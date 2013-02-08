@@ -358,16 +358,16 @@ NSString *const IDNMutationPref = @"IDNMutationPref";
 
 -(void) createPopulationIn {
     [self.workingPopulation createPopulationWithCount:self.populationSize andDNALength:self.DNALength];
+    [self performSelectorInBackground:@selector(evolution) withObject:nil];
 }
 
 -(void)handleRandomNumberChange:(NSNotification *) notif {
     unsigned int temp = [[[notif userInfo] objectForKey:@"randomNumber"]intValue];
-    
-    [self createPopulationIn];
     [self.workingPopulation setPopulationRandomNumber:temp];
     
-    
-    [self performSelectorInBackground:@selector(evolution) withObject:nil];
+    if ([self.workingPopulation.population count] == 0) {
+        [self createPopulationIn];
+    }
     
     self.randomFlag = true;
     self.pauseStatement = true;
