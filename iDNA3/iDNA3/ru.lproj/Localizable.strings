@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  iDNA3
+*/
+
+"BEST_MATCH"     = "Лучшее совпадение - %ld%%";
+"GENERATION"     = "Поколение: %ld";
+"PROCEED"        = "Продолжить";
+"CANCEL"         = "Отмена";
+"MISMATCH_DNA"   = "Размер новой ДНК отличается от существующей!";
+"GENERATION_1"   = "в 1ом";
+"GENERATION_2"   = "во 2ом";
+"GENERATION_3"   = "в 3ем";
+"GENERATION_NXT" = "в %ldом";
+"OK"             = "Хорошо";
+"MATCH_REATCHED" = "Полное совпадение достигнуто %@ поколении";
+"WANT_QUIT"      = "Вы действительно хотите выйти из приложения?";
+"_YES_"          = "Да";
+"_NO_"           = "Нет";

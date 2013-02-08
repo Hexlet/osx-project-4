@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  iDNA3
+*/
+
+"BEST_MATCH"     = "Best individual match - %ld%%";
+"GENERATION"     = "Generation: %ld";
+"PROCEED"        = "Proceed";
+"CANCEL"         = "Cancel";
+"MISMATCH_DNA"   = "New DNA has different size!";
+"GENERATION_1"   = "1th";
+"GENERATION_2"   = "2nd";
+"GENERATION_3"   = "3rd";
+"GENERATION_NXT" = "%ldth";
+"OK"             = "Ok";
+"MATCH_REATCHED" = "Total match reached at %@ generation";
+"WANT_QUIT"      = "Do you really want to quit?";
+"_YES_"          = "Yes";
+"_NO_"           = "No";
+
+
+
