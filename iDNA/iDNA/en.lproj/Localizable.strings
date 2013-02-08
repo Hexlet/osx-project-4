@@ -1,0 +1,17 @@
+"YES" = "Yes";
+"NO" = "No";
+"QUIT_MSG" = "Quit iDNA";
+"QUIT_TEXT" = "Do you really want to exit?";
+
+"STOP" = "Stop evolution";
+"START" = "Start evolution";
+"PAUSE" = "Pause";
+"RESUME" = "Resume";
+
+"FILE_READ_ERROR" = "Cannot read the file";
+"FILE_FORMAT_ERROR" = "Text from the file is not DNA";
+"TOO_LONG_DNA_ERROR" = "DNA is too long";
+"TOO_SHORT_DNA_ERROR" = "DNA is too short";
+
+"OPEN_FILE_MSG" = "Open file";
+"REPLACE_TEXT" = "Do you really want replace current goal DNA with DNA from file?";
