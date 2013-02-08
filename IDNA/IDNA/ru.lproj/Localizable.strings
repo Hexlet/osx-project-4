@@ -1,0 +1,21 @@
+/*
+ Localizable.strings
+ IDNA
+ 
+ Created by Dmitriy Zhukov on 06.02.13.
+ Copyright (c) 2013 Dmitriy Zhukov. All rights reserved.
+ */
+"FIND_MSG" = "Идеальная ДНК найдена";
+"GENERATIN_LEFT_MSG" = "Прошло %lu поколений";
+"CANT_SAVE_MSG" = "Не удалось сохранить файл";
+"CANT_OPEN_MSG" = "Не удалось открыть файл";
+"INCORRECT_DATA_MSG" = "Неправильный формат данных. Правильно так: 'ATGCCGAATGTT'";
+"INCORRECT_DNA_LONG_MSG" = "Длинна загружаемой ДНК и установленная длинна ДНК в интерфейсе не совпадают. Поменяйте длинну ДНК в интерфейсе на: %li";
+"SAVE_HEADER_MSG" = "Сохранить данные в файлe";
+"OPEN_HEADER_MSG" = "Загрузить данные из файла";
+"SURE_MSG" = "Вы уверенны что хотите это сделать?";
+"MAY_BE_NO_MSG" = "Точно? Может быть нет?";
+"OK_BUT_MSG" = "Хорошо, но мы вас предупреждали...";
+"YES_MSG" = "Да";
+"NO_MSG" = "Нет";
+"WINDOW_CLOSE_MSG" = "Закрыть текущее окно";
