@@ -1,0 +1,21 @@
+/*
+ Localizable.strings
+ IDNA
+ 
+ Created by Dmitriy Zhukov on 06.02.13.
+ Copyright (c) 2013 Dmitriy Zhukov. All rights reserved.
+ */
+"REMOVE_MSG" = "Find ideal DNA";
+"GENERATIN_LEFT_MSG" = "Generation left:%lu";
+"CANT_SAVE_MSG" = "Can't save file";
+"CANT_OPEN_MSG" = "Can't open file";
+"INCORRECT_DATA_MSG" = "Incorrect data format. Currectly like this: 'ATGCCGAATGTT'";
+"INCORRECT_DNA_LONG_MSG" = "Incorrect DNA long. Change it to %li";
+"SAVE_HEADER_MSG" = "Save data to file";
+"OPEN_HEADER_MSG" = "Open data from file";
+"SURE_MSG" = "Are you sure?";
+"MAY_BE_NO_MSG" = "May be no?";
+"OK_BUT_MSG" = "ОK, but we warned you...";
+"YES_MSG" = "YES";
+"NO_MSG" = "NO";
+"WINDOW_CLOSE_MSG" = "Close current window";
