@@ -37,13 +37,13 @@
 	[_slMutationRate setIntegerValue:mutationRate];
 	[_slPopulationSize setIntegerValue:populationSize];
 	
+	[_lbStatus setStringValue:@""];
+	
 	evolution = [[Evolution alloc] init];
 	[self setGoalDNA];
 	[self addObserver:self forKeyPath:@"dnaLength" options:NSKeyValueObservingOptionNew context:nil];
 	[self addObserver:self forKeyPath:@"mutationRate" options:NSKeyValueObservingOptionNew context:nil];
 	[self addObserver:self forKeyPath:@"populationSize" options:NSKeyValueObservingOptionNew context:nil];
-	
-	[_vwGraph setHidden:YES];
 }
 
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -52,9 +52,6 @@
 	[evolution reset];
 	[self setLabelForGeneration:0];
 	[self setLabelForBestMatch:0];
-	
-	[_vwGraph reset];
-	[_vwGraph setNeedsDisplay:YES];
 }	
 
 // Only for remove observers.
@@ -92,8 +89,17 @@
 	}
 	else
 	{
-		NSAlert *alert = [NSAlert alertWithMessageText:@"Какой-то из параметров равен 0." defaultButton:@"Просто закройся" alternateButton:@"Я понял" otherButton:@"Другая кнопка" informativeTextWithFormat:@"Скорее всего это размер ДНК или популяции."];
-		[alert runModal];
+		NSMutableString *title = [NSMutableString stringWithString:@""];
+		if (dnaLength == 0)
+			[title appendFormat:NSLocalizedString(@"ALERT_PARAMETER_TITLE", nil), NSLocalizedString(@"DNA_LENGTH", nil)];
+		if (populationSize == 0)
+			[title appendFormat:NSLocalizedString(@"ALERT_PARAMETER_TITLE", nil), NSLocalizedString(@"POPULATION_SIZE", nil)];
+		
+		[[NSAlert alertWithMessageText :	title
+				defaultButton :				NSLocalizedString(@"ALERT_PARAMETER_DEFAULT_BTN", nil)
+				alternateButton :			NSLocalizedString(@"ALERT_PARAMETER_ALT_BTN", nil)
+				otherButton :				NSLocalizedString(@"ALERT_PARAMETER_OTHER_BTN", nil)
+				informativeTextWithFormat :	NSLocalizedString(@"ALERT_PARAMETER_MESSAGE", nil)] runModal];
 	}
 }
 
@@ -110,12 +116,6 @@
 		[self setMutationRate:currentMutationRate];
 	if (currentPopulationSize != [self populationSize])
 		[self setPopulationSize:currentPopulationSize];
-	
-//	[self setDnaLength:];
-//	[self setMutationRate:];
-	// It can be over 1000 which implies a space after thousands.
-	//[self setPopulationSize:[[[_tfPopulationSize stringValue] stringByReplacingOccurrencesOfString:@"\t" withString:@""] integerValue]];
-//	[self setPopulationSize:];
 }
 
 // Pause button pressed.

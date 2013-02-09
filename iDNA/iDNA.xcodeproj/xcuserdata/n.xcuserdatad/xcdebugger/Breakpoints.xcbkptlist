@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iDNA/AppDelegate.m"
-         timestampString = "381939548.280556"
+         timestampString = "381946527.011291"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "211"
-         endingLineNumber = "211"
+         startingLineNumber = "210"
+         endingLineNumber = "210"
          landmarkName = "-setDnaLength:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iDNA/AppDelegate.m"
-         timestampString = "380063088.913543"
+         timestampString = "381943605.499617"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "69"
-         endingLineNumber = "69"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
          landmarkName = "-startEvolution:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -85,38 +85,12 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "iDNA/AppDelegate.h"
-         timestampString = "379609438.012066"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
-         landmarkName = "@interface AppDelegate"
-         landmarkType = "2">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "iDNA/AppDelegate.m"
-         timestampString = "381939548.280556"
+         timestampString = "381946527.011291"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114"
-         landmarkName = "-checkInputValues"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "iDNA/AppDelegate.m"
-         timestampString = "381939548.280556"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "146"
-         endingLineNumber = "146"
+         startingLineNumber = "145"
+         endingLineNumber = "145"
          landmarkName = "-openDNADialog"
          landmarkType = "5">
       </FileBreakpoint>
@@ -138,24 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iDNA/AppDelegate.m"
-         timestampString = "381939548.280556"
+         timestampString = "381943605.499617"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "116"
-         endingLineNumber = "116"
-         landmarkName = "-checkInputValues"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "iDNA/AppDelegate.m"
-         timestampString = "381938646.315056"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
          landmarkName = "-startEvolution:"
          landmarkType = "5">
          <Actions>
@@ -173,12 +134,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iDNA/AppDelegate.m"
-         timestampString = "381939548.280556"
+         timestampString = "381946527.011291"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "124"
-         endingLineNumber = "124"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
          landmarkName = "-pause:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "iDNA/AppDelegate.m"
+         timestampString = "381946673.757993"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "92"
+         endingLineNumber = "92"
+         landmarkName = "-startEvolution:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

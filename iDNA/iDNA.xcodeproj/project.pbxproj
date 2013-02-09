@@ -16,7 +16,7 @@
 		0D6AEA431689FE7400034395 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AEA421689FE7300034395 /* Cell.m */; };
 		0D6AEA4A1689FF5500034395 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AEA491689FF5500034395 /* NSMutableArray+Shuffle.m */; };
 		0D7E761E169A0BBA0089D9C8 /* Evolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E761D169A0BBA0089D9C8 /* Evolution.m */; };
-		0DD00A8116A05DAA00B661B2 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD00A8016A05DAA00B661B2 /* Graph.m */; };
+		0DD850ED16C401A8002ECD1C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DD850EF16C401A8002ECD1C /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +40,11 @@
 		0D7E761C169A0BBA0089D9C8 /* Evolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evolution.h; sourceTree = "<group>"; };
 		0D7E761D169A0BBA0089D9C8 /* Evolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evolution.m; sourceTree = "<group>"; };
 		0D7E762E169B11AC0089D9C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0DD00A7F16A05DAA00B661B2 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
-		0DD00A8016A05DAA00B661B2 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		0DD850E816C3FFAC002ECD1C /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0DD850E916C3FFAC002ECD1C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0DD850EA16C3FFAD002ECD1C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0DD850EE16C401A8002ECD1C /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0DD850F016C401AD002ECD1C /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +109,7 @@
 				0D6AEA2F1689DF2600034395 /* AppDelegate.m */,
 				0D6AEA311689DF2600034395 /* MainMenu.xib */,
 				0D6AEA231689DF2600034395 /* Supporting Files */,
-				0DD00A7F16A05DAA00B661B2 /* Graph.h */,
-				0DD00A8016A05DAA00B661B2 /* Graph.m */,
+				0DD850EF16C401A8002ECD1C /* Localizable.strings */,
 			);
 			path = iDNA;
 			sourceTree = "<group>";
@@ -159,6 +161,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 			);
 			mainGroup = 0D6AEA0D1689DF2600034395;
 			productRefGroup = 0D6AEA191689DF2600034395 /* Products */;
@@ -178,6 +181,7 @@
 				0D6AEA271689DF2600034395 /* InfoPlist.strings in Resources */,
 				0D6AEA2D1689DF2600034395 /* Credits.rtf in Resources */,
 				0D6AEA331689DF2600034395 /* MainMenu.xib in Resources */,
+				0DD850ED16C401A8002ECD1C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +197,6 @@
 				0D6AEA431689FE7400034395 /* Cell.m in Sources */,
 				0D6AEA4A1689FF5500034395 /* NSMutableArray+Shuffle.m in Sources */,
 				0D7E761E169A0BBA0089D9C8 /* Evolution.m in Sources */,
-				0DD00A8116A05DAA00B661B2 /* Graph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +207,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0D6AEA261689DF2600034395 /* en */,
+				0DD850E916C3FFAC002ECD1C /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -212,6 +216,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0D6AEA2C1689DF2600034395 /* en */,
+				0DD850EA16C3FFAD002ECD1C /* ru */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -220,8 +225,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				0D6AEA321689DF2600034395 /* en */,
+				0DD850E816C3FFAC002ECD1C /* ru */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		0DD850EF16C401A8002ECD1C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DD850EE16C401A8002ECD1C /* en */,
+				0DD850F016C401AD002ECD1C /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

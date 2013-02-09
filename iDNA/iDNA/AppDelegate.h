@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Cell.h"
-#import "Graph.h"
 #import "Evolution.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
@@ -38,9 +37,7 @@
 // Labels.
 @property (weak) IBOutlet NSTextField *lbGeneration;
 @property (weak) IBOutlet NSTextField *lbBestMatch;
-
-// View for drawing graph.
-@property (weak) IBOutlet Graph *vwGraph;
+@property (weak) IBOutlet NSTextField *lbStatus;
 
 - (IBAction)startEvolution:(id)sender;
 - (IBAction)pause:(id)sender;
