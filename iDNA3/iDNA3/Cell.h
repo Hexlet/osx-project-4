@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+ 
 @interface Cell : NSObject
 {
     NSInteger previousLength;

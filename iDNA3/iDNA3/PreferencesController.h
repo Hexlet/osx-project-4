@@ -4,11 +4,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-
-#define iDNAstring     @"nucleoString"
-#define iDNARate       @"mutationRate"
-#define iDNAPopulation @"populationSize"
+#import "iDNADefine.h"
 
 @interface PreferencesController : NSWindowController
 

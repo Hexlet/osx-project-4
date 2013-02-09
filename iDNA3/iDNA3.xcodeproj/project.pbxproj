@@ -40,6 +40,7 @@
 		4D33AB0F16C3006300354C1C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4D33AB1316C306B100354C1C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D33AB1516C306B700354C1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D3F15B316C59EB100594272 /* iDNADefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iDNADefine.h; sourceTree = "<group>"; };
 		4D52D1F11687257C00B579EA /* iDNA.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iDNA.icns; sourceTree = "<group>"; };
 		4DB5AC2716878E640043316A /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		4DB5AC2816878E640043316A /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		4D1C5EC9167E6573001365B4 /* iDNA3 */ = {
 			isa = PBXGroup;
 			children = (
+				4D3F15B316C59EB100594272 /* iDNADefine.h */,
 				4D1C5ED5167E6574001365B4 /* AppDelegate.h */,
 				4D1C5ED6167E6574001365B4 /* AppDelegate.m */,
 				4D1C5EE2167E8DA3001365B4 /* Cell.h */,

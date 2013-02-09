@@ -18,7 +18,7 @@
     NSInteger population = 4000;
     NSString *DNA = @"CCAGTCCCGCTGGCATTAATCCATACCGTACCAAAGTTCCCATGGCATTGCGCGCGGACACTGAATACCTGGGCGCTGTAGTTGCTGGACCTTCGTTGTT";
     
-    [defaultsValues setObject:DNA forKey:iDNAstring];
+    [defaultsValues setObject:DNA forKey:iDNAString];
     [defaultsValues setObject:[NSNumber numberWithInteger:rate] forKey:iDNARate];
     [defaultsValues setObject:[NSNumber numberWithInteger:population] forKey:iDNAPopulation];
     
@@ -27,12 +27,12 @@
 
 + (NSString *)preferencesDNAString
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:iDNAstring];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:iDNAString];
 }
 
 + (void)setPreferencesDNAString:(NSString *)string
 {
-    [[NSUserDefaults standardUserDefaults] setObject:string forKey:iDNAstring];
+    [[NSUserDefaults standardUserDefaults] setObject:string forKey:iDNAString];
 }
 
 + (NSInteger)preferencesMutateRate

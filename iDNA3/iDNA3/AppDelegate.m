@@ -5,7 +5,7 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate
+@implementation AppDelegate 
 
 @synthesize window;
 //NSTextField
@@ -34,6 +34,7 @@
 @synthesize DNALength;
 @synthesize mutationRate;
 @synthesize goalDNA;
+// @synthesize dataContainer;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -43,9 +44,9 @@
                   DNALength:[[PreferencesController preferencesDNAString] length]
             andMutationRate:[PreferencesController preferencesMutateRate]];
     
-    [self addObserver:self forKeyPath:@"DNALength" options:NSKeyValueObservingOptionNew context:nil];
-    [self addObserver:self forKeyPath:@"populationSize" options:NSKeyValueObservingOptionNew context:nil];
-    [self addObserver:self forKeyPath:@"mutationRate" options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:iDNAPopulation options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:iDNALength options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:iDNARate options:NSKeyValueObservingOptionNew context:nil];
     
     [self pause:self];                      //  [pause setEnabled: NO];
     [window makeFirstResponder: nil];       //  disable focus
@@ -63,9 +64,9 @@
     rate = rate > 0 ? rate : 1;
     rate = rate < 99 ? rate : 99;
     
-    [self setValue:[NSNumber numberWithInteger:size] forKey: @"populationSize"];
-    [self setValue:[NSNumber numberWithInteger:length] forKey: @"DNALength"];
-    [self setValue:[NSNumber numberWithInteger: rate] forKey: @"mutationRate"];
+    [self setValue:[NSNumber numberWithInteger:size] forKey:iDNAPopulation];
+    [self setValue:[NSNumber numberWithInteger:length] forKey:iDNALength];
+    [self setValue:[NSNumber numberWithInteger: rate] forKey:iDNARate];
     
     population = [NSMutableArray arrayWithCapacity:size];
     
@@ -83,9 +84,9 @@
     start = NO;
     done = YES;
     
-    [self setValue:[NSNumber numberWithInteger:size] forKey: @"populationSize"];
-    [self setValue:[NSNumber numberWithInteger:[string length]] forKey: @"DNALength"];
-    [self setValue:[NSNumber numberWithInteger: rate] forKey: @"mutationRate"];
+    [self setValue:[NSNumber numberWithInteger:size] forKey:iDNAPopulation];
+    [self setValue:[NSNumber numberWithInteger:[string length]] forKey:iDNALength];
+    [self setValue:[NSNumber numberWithInteger: rate] forKey:iDNARate];
     
     population = [NSMutableArray arrayWithCapacity:size];
     
@@ -156,6 +157,68 @@
                         orDNAString:[PreferencesController preferencesDNAString]
                      orMutationRate:[PreferencesController preferencesMutateRate]];
     }
+}
+
+
+- (IBAction)openDocument:(id)sender
+{  
+    NSOpenPanel *open = [NSOpenPanel openPanel];
+    [open setAllowedFileTypes:[NSArray arrayWithObject:@"iDNA"]];
+    [open setAllowsOtherFileTypes:NO];
+    
+    NSInteger result = [open runModal];
+    
+    if (result == NSOKButton)
+    {
+        selectedFile = [open URL];
+        
+        NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"LOAD_DATA", "load from file")
+                                         defaultButton:NSLocalizedString(@"_YES_", "Yes")
+                                       alternateButton:NSLocalizedString(@"_NO_", "No")
+                                           otherButton:nil
+                             informativeTextWithFormat:@""];
+        
+        [alert beginSheetModalForWindow:window modalDelegate:self didEndSelector:@selector(openAlert:returnCode:contextInfo:) contextInfo:nil];
+        
+    }
+
+}
+
+- (void)openAlert:(NSAlert *)alert returnCode:(int)button contextInfo:(void *)context
+{  
+    if(button == NSAlertDefaultReturn)
+    {      
+        NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc] initWithContentsOfURL:selectedFile];
+        
+        [goalDNA changeDNAString:[mutableDict objectForKey:iDNAString]];
+        [self setPopulationSize:[[mutableDict objectForKey:iDNAPopulation] integerValue]
+                      DNALength:[[mutableDict objectForKey:iDNALength] integerValue]
+                andMutationRate:[[mutableDict objectForKey:iDNARate] integerValue]];
+    }
+}
+
+- (IBAction)saveDocument:(id)sender
+{
+    NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc] init];
+
+    [mutableDict setObject:[goalDNA DNAString] forKey:iDNAString];
+    [mutableDict setObject:[NSNumber numberWithInteger:populationSize] forKey:iDNAPopulation];
+    [mutableDict setObject:[NSNumber numberWithInteger:DNALength] forKey:iDNALength];
+    [mutableDict setObject:[NSNumber numberWithInteger:mutationRate] forKey:iDNARate];
+
+    NSSavePanel *save = [NSSavePanel savePanel];
+    [save setAllowedFileTypes:[NSArray arrayWithObject:@"iDNA"]];
+    [save setAllowsOtherFileTypes:NO];
+    
+    NSInteger result = [save runModal];
+    
+    if (result == NSOKButton)
+    {
+        NSString *selected = [[save URL] path];
+       
+        [mutableDict writeToFile:selected atomically:NO];
+    }
+
 }
 
 
@@ -273,7 +336,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if ([keyPath compare:@"DNALength"] == NSOrderedSame)
+    if ([keyPath compare:iDNALength] == NSOrderedSame)
     {
         [goalDNA changeDNALength:DNALength];
         [textViewGoalDNA setString:goalDNA.nucleo];
@@ -284,15 +347,15 @@
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
-        NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"WANT_QUIT", "want to quit?")
-                                         defaultButton:NSLocalizedString(@"_YES_", "Yes")
-                                       alternateButton:NSLocalizedString(@"_NO_", "No")
-                                           otherButton:nil
-                             informativeTextWithFormat:@""];
+    NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"WANT_QUIT", "want to quit?")
+                                     defaultButton:NSLocalizedString(@"_YES_", "Yes")
+                                   alternateButton:NSLocalizedString(@"_NO_", "No")
+                                       otherButton:nil
+                         informativeTextWithFormat:@""];
     
-        [alert beginSheetModalForWindow:window modalDelegate:self didEndSelector:@selector(quitAlert:returnCode:contextInfo:) contextInfo:nil];
+    [alert beginSheetModalForWindow:window modalDelegate:self didEndSelector:@selector(quitAlert:returnCode:contextInfo:) contextInfo:nil];
     
-        return NSTerminateLater;
+    return NSTerminateLater;
 }
 
 - (void)quitAlert:(NSAlert *)alert returnCode:(int)button contextInfo:(void *)context

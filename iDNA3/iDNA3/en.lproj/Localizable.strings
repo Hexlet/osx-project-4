@@ -15,6 +15,7 @@
 "OK"             = "Ok";
 "MATCH_REATCHED" = "Total match reached at %@ generation";
 "WANT_QUIT"      = "Do you really want to quit?";
+"LOAD_DATA"      = "load data from a file?";
 "_YES_"          = "Yes";
 "_NO_"           = "No";
 

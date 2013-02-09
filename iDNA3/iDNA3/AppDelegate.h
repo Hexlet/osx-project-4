@@ -6,8 +6,9 @@
 #import <Cocoa/Cocoa.h>
 #import "Cell.h"
 #import "PreferencesController.h"
+#import "iDNADefine.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSResponder /*NSObject*/ <NSApplicationDelegate>
 {
     BOOL            start;
     BOOL            done;
@@ -15,6 +16,7 @@
     NSInteger       smallestDistance;
     NSMutableArray *population;
     NSString       *nucleoString;
+    NSURL          *selectedFile;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -43,7 +45,9 @@
 @property NSInteger populationSize;
 @property NSInteger DNALength;
 @property NSInteger mutationRate;
-@property Cell     *goalDNA;
+
+@property Cell *goalDNA;
+// @property DataController *dataContainer;
 
 - (void)setPopulationSize:(NSInteger)size DNALength:(NSInteger)length andMutationRate:(NSInteger)rate;
 - (void)changePopulationnSize:(NSInteger)size orDNAString:(NSString *)string orMutationRate:(NSInteger)rate;
@@ -53,6 +57,9 @@
 - (IBAction)startEvolution:(id)sender;
 - (IBAction)pause:(id)sender;
 - (IBAction)loadGoal:(id)sender;
+
+- (IBAction)openDocument:(id)sender;
+- (IBAction)saveDocument:(id)sender;
 
 - (void)performEvolutionInBackground;
 - (void)mainThreadAlert;
