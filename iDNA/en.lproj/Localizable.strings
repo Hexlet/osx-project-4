@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  iDNA
+
+  Created by Alexander Shvets on 30.01.13.
+  Copyright (c) 2013 Alexander Shvets. All rights reserved.
+*/
+
+"LCD_GENERATION" = "Generation: %i";
+"LCD_BEST_MATCH" = "Best individual match: %i%%";
+"LCD_EVOLUTION_COMPLETE" = "Evolution successfully complete.";
+
+"GROWL_MSG" = "Evolution is successfully completed at %i generation.";
+
+"BTN_PAUSE" = "Pause";
+"BTN_CONTINUE" = "Continue";
+"BTN_YES" = "Yes";
+"BTN_NO" = "No";
+
+"ALERT_WRONG_DNA_FORMAT" = "\nWrong DNA format.\nNo nucleotides found.";
+"ALERT_CONFIRMATION_TITLE" = "\nEvolution in progress.";
+"ALERT_CONFIRMATION_TEXT" = "Do you really want to close an application?";

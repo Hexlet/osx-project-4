@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  iDNA
+
+  Created by Alexander Shvets on 30.01.13.
+  Copyright (c) 2013 Alexander Shvets. All rights reserved.
+*/
+
+"LCD_GENERATION" = "Поколение: %i";
+"LCD_BEST_MATCH" = "Максимальное сходство: %i%%";
+"LCD_EVOLUTION_COMPLETE" = "Эволюция успешно завершена.";
+
+"GROWL_MSG" = "Эволюция успешно завершена в %i поколении.";
+
+"BTN_PAUSE" = "Пауза";
+"BTN_CONTINUE" = "Продолжить";
+"BTN_YES" = "Да";
+"BTN_NO" = "Нет";
+
+"ALERT_WRONG_DNA_FORMAT" = "\nНеправильный формат ДНК.\nВ файле не обнаружено нуклеотидов.";
+"ALERT_CONFIRMATION_TITLE" = "\nЭволюция в процессе.";
+"ALERT_CONFIRMATION_TEXT" = "Вы действительно хотите закрыть приложение?";
