@@ -45,6 +45,8 @@ NSString* const keyDefaulMutationRate = @"iDNA_defaultMutationRate";
 {
     [self appReset];
     
+    randomSeedGenerated = NO;
+    
     IntegerValueFormatter* formatter = [[IntegerValueFormatter alloc] init];
     [_fieldPopulationSize setFormatter:formatter];
     [_fieldDNALength setFormatter:formatter];
@@ -61,6 +63,7 @@ NSString* const keyDefaulMutationRate = @"iDNA_defaultMutationRate";
     
     [_window setDelegate:self];
     
+    [self generateRandomSeed];
 }
 
 - (void)dealloc {
@@ -71,10 +74,6 @@ NSString* const keyDefaulMutationRate = @"iDNA_defaultMutationRate";
 
 - (void)appReset
 {
-    
-    NSPoint point = [NSEvent mouseLocation];
-    srandom(point.x * point.y); //seed random generator
-    
     appState = APP_STATE_IDLE;
     generation = 1;
     bestMatch = 0;
@@ -82,7 +81,6 @@ NSString* const keyDefaulMutationRate = @"iDNA_defaultMutationRate";
     [self enableControls];
     
     [[[NSApplication sharedApplication] dockTile] setBadgeLabel:nil];
-    
 }
 
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -227,8 +225,7 @@ NSString* const keyDefaulMutationRate = @"iDNA_defaultMutationRate";
                 [self appReset];
                 
                 NSLog(@"JOB DONE!!!!");
-                
-                //[self performSelectorOnMainThread:@selector(test) withObject:nil waitUntilDone:NO];
+      
             }
             
         }
@@ -325,6 +322,36 @@ NSString* const keyDefaulMutationRate = @"iDNA_defaultMutationRate";
     }
     
     return dnaString;
+}
+
+
+//инициализация генератора случайных чисел на основе движения мыши
+- (void)generateRandomSeed
+{
+    [NSApp beginSheet:_randomProgressPanel
+       modalForWindow:_window
+        modalDelegate:self
+       didEndSelector:nil contextInfo:nil];
+    
+    __block double progress = 0;
+    __block int seed = 0;
+    __block id mouseTracker = [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^(NSEvent* mouseEvent) {
+        if(progress < 100){
+            NSPoint point = [mouseEvent locationInWindow];
+            seed = seed + (point.x * point.y);
+            progress += .5;
+            
+            [_randomProgressBar setDoubleValue:progress];
+        } else {
+            [NSEvent removeMonitor:mouseTracker];
+            
+            [NSApp endSheet:_randomProgressPanel];
+            [_randomProgressPanel orderOut:_window];
+            
+            srandom(seed);
+            NSLog(@"Random number seeded");
+        }
+    }];
 }
 
 

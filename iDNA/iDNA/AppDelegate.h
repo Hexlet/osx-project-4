@@ -29,6 +29,8 @@ extern NSString* const keyDefaulMutationRate;
     int bestMatch;
     int appState;
     
+    BOOL randomSeedGenerated;
+    
     Cell* goalDNA;
     Population* population;
     
@@ -52,6 +54,9 @@ extern NSString* const keyDefaulMutationRate;
 @property (weak) IBOutlet NSButton *btnPause;
 @property (weak) IBOutlet NSButton *btnLoad;
 
+@property (unsafe_unretained) IBOutlet NSPanel *randomProgressPanel;
+@property (weak) IBOutlet NSProgressIndicator *randomProgressBar;
+
 - (IBAction)startEvolution:(id)sender;
 - (IBAction)pauseEvolution:(id)sender;
 - (IBAction)loadGoalDNA:(id)sender;
@@ -67,6 +72,8 @@ extern NSString* const keyDefaulMutationRate;
 
 - (void)showExitConfirmation;
 - (void)alertDidEnd:(NSAlert*)alert code:(NSInteger)choice context:(void*)context;
+
+- (void)generateRandomSeed;
 
 + (void)registerUserDefaults;
 - (int)preferencesDefaultPopulationSize;

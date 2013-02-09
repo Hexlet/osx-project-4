@@ -70,9 +70,6 @@
     NSArray* topCells = [self.cells subarrayWithRange:NSMakeRange(0, halfPopulation + (populationSize % halfPopulation))];
     NSMutableArray* newCells = [NSMutableArray arrayWithCapacity:halfPopulation];
     
-    //NSPoint point = [NSEvent mouseLocation];
-    //srandom(point.x * point.y); //seed random generator
-    
     for(int i = 0; i < halfPopulation; i++){
         
         // случайно выбираем две клетки для скрещивания

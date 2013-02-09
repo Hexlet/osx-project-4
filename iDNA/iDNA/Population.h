@@ -14,15 +14,10 @@
 @property NSMutableArray* cells;
 
 - (id)initWithPopulationSize:(int)size andDNALength:(int)dnaLength;
-
 - (void)hammingDistanceWith:(Cell*)goalDNA;
-
 - (void)sort;
-
 - (BOOL)evolutionSuccess;
-
 - (void)hybridize;
-
 - (void)mutate:(int)percent;
 
 @end
