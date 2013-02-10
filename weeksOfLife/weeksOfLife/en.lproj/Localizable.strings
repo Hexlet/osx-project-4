@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Memento Mori
+
+  Created by Александр Борунов on 28.01.13.
+  Copyright (c) 2013 Александр Борунов. All rights reserved.
+ */
+
+"ABOUT1" = "Understanding that your life is finite, sooner or later comes to all. Less this understanding motivates the active actions. Once I was very impressed with this video ";
+"ABOUT2" = "here.";
+"ABOUT3" = "  I decided to write this small program. It just reminds me that before the end of the active period of my life that's left so many weeks. One number in the status bar at the top. But it is every week is a little less. And I do not worry about it - why? - But I began to think, and most importantly, to do, try to get the outgoing week was full of meaning, my meaning.\nAnd what you want.\n© ";
+"ABOUT4" = "Alexander Borunov";
+"LINK_VIDEO" = "http://www.youtube.com/watch?v=Eelw4CS1RD8";
+"LINK_MAIL" = "mailto:borunov@yandex.ru";
