@@ -79,7 +79,7 @@
         [_volumesTableView selectRowIndexes:indexSet byExtendingSelection:NO];
     }
     if (volumes != nil) {
-        [self appendTextToDetails:@"Getting volumes information... Done.\n"];
+        [self appendTextToDetails: NSLocalizedString(@"GETTING_INFO_MSG", "GETTING_INFO_MSG")];
     }
 }
 
@@ -132,8 +132,8 @@
         [openDlg setCanChooseFiles:NO];
         [openDlg setCanChooseDirectories:YES];
         [openDlg setAllowsMultipleSelection:NO];
-        [openDlg setTitle:@"Select path to keep BOOTCAMP virtual machine files"];
-        [openDlg setPrompt:@"Select"];
+        [openDlg setTitle:NSLocalizedString(@"SELECT_PATH_MSG", "SELECT_PATH_MSG")];
+        [openDlg setPrompt:NSLocalizedString(@"SELECT_BTN", "SELECT_BTN")];
         if ([openDlg runModal] == NSOKButton) {
             NSString *bootcamp_vm_dir = [[openDlg URL] path];
             NSString *chmod_dev = [NSString stringWithFormat:@"sudo chmod a+rw /dev/%@;", v.bsdId];
@@ -153,17 +153,17 @@
             [create_vmdk_source appendString:@"\" with administrator privileges"];
             
             //Print details to console
-            [self appendTextToDetails:[NSString stringWithFormat:@"Running script: %@ ...", chmod_dev]];
-            [self appendTextToDetails:[NSString stringWithFormat:@"Running script: %@ ...", cd_vm_dir]];
-            [self appendTextToDetails:[NSString stringWithFormat:@"Running script: %@ ...", vbmanage_create]];
-            [self appendTextToDetails:[NSString stringWithFormat:@"Running script: %@ ...", chmod_chown_vmdk]];
+            [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), chmod_dev]];
+            [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), cd_vm_dir]];
+            [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), vbmanage_create]];
+            [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), chmod_chown_vmdk]];
             
             //Execute AppleScript
             NSAppleScript *create_vmdk_script = [[NSAppleScript alloc] initWithSource:create_vmdk_source];
             NSDictionary *errorDict;
             [create_vmdk_script executeAndReturnError:&errorDict];
-            [self appendTextToDetails:@"Done."];
-            
+            [self appendTextToDetails:NSLocalizedString(@"DONE_MSG", "DONE_MSG")];
+
             //Fix sticky bits
             NSString *path = [NSString stringWithFormat:@"%@/bootcamp-pt.vmdk", bootcamp_vm_dir];
             NSLog(@"Path: %@", path);

@@ -16,6 +16,7 @@
 		FD18344C168A3DB000D3E677 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD18344A168A3DB000D3E677 /* MainMenu.xib */; };
 		FD183453168A3DC400D3E677 /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD183452168A3DC400D3E677 /* DiskArbitration.framework */; };
 		FD183456168A478300D3E677 /* Volume.m in Sources */ = {isa = PBXBuildFile; fileRef = FD183455168A478300D3E677 /* Volume.m */; };
+		FD6427A816C9840500C6B8FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD6427AA16C9840500C6B8FA /* Localizable.strings */; };
 		FDA989CF168A65AB008B41F7 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FDA989CE168A65AB008B41F7 /* Icon.icns */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,12 @@
 		FD183452168A3DC400D3E677 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = System/Library/Frameworks/DiskArbitration.framework; sourceTree = SDKROOT; };
 		FD183454168A478300D3E677 /* Volume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volume.h; sourceTree = "<group>"; };
 		FD183455168A478300D3E677 /* Volume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volume.m; sourceTree = "<group>"; };
+		FD6427A216C97F2900C6B8FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/Document.xib; sourceTree = "<group>"; };
+		FD6427A316C97F2900C6B8FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FD6427A416C97F2900C6B8FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD6427A516C97F2A00C6B8FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		FD6427A916C9840500C6B8FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FD6427AB16C9840D00C6B8FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FDA989CE168A65AB008B41F7 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +115,7 @@
 		FD183439168A3DB000D3E677 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD6427AA16C9840500C6B8FA /* Localizable.strings */,
 				FD18343A168A3DB000D3E677 /* VBoxCamp-Info.plist */,
 				FD18343B168A3DB000D3E677 /* InfoPlist.strings */,
 				FD18343E168A3DB000D3E677 /* main.m */,
@@ -152,6 +160,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 			);
 			mainGroup = FD183423168A3DB000D3E677;
 			productRefGroup = FD18342F168A3DB000D3E677 /* Products */;
@@ -173,6 +182,7 @@
 				FD183449168A3DB000D3E677 /* Document.xib in Resources */,
 				FD18344C168A3DB000D3E677 /* MainMenu.xib in Resources */,
 				FDA989CF168A65AB008B41F7 /* Icon.icns in Resources */,
+				FD6427A816C9840500C6B8FA /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +206,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FD18343C168A3DB000D3E677 /* en */,
+				FD6427A416C97F2900C6B8FA /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FD183442168A3DB000D3E677 /* en */,
+				FD6427A516C97F2A00C6B8FA /* ru */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -212,6 +224,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FD183448168A3DB000D3E677 /* en */,
+				FD6427A216C97F2900C6B8FA /* ru */,
 			);
 			name = Document.xib;
 			sourceTree = "<group>";
@@ -220,8 +233,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				FD18344B168A3DB000D3E677 /* en */,
+				FD6427A316C97F2900C6B8FA /* ru */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		FD6427AA16C9840500C6B8FA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD6427A916C9840500C6B8FA /* en */,
+				FD6427AB16C9840D00C6B8FA /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

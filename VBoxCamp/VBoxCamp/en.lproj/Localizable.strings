@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  VBoxCamp
+
+  Created by Dmitriy Zavorokhin on 2/11/13.
+  Copyright (c) 2013 goodman116@gmail.com. All rights reserved.
+*/
+
+"SELECT_PATH_MSG" = "Select path to keep BOOTCAMP virtual machine files";
+"SELECT_BTN" = "Select";
+"RUNNING_SCRIPT_MSG" = "Running script: %@ ...";
+"GETTING_INFO_MSG" = "Getting volumes information... Done.\n";
+"DONE_MSG" = "Done.";
