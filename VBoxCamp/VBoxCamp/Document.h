@@ -14,6 +14,9 @@
 
 @property (assign) IBOutlet NSTableView *volumesTableView;
 @property (assign) IBOutlet NSTextView *detailsTextView;
+@property (readonly) NSString *vm_name;
+@property (readonly) NSString *vmdk_file_name;
+
 - (IBAction)createBootcampVM:(id)sender;
 - (IBAction)refresh:(id)sender;
 
