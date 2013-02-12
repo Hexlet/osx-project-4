@@ -1,0 +1,774 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		110F96DD166B7AC000CC6070 /* RpcRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F96DC166B7AC000CC6070 /* RpcRequest.m */; };
+		110F96E4166B844D00CC6070 /* OptionsServiceAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F96E3166B844D00CC6070 /* OptionsServiceAssistant.m */; };
+		11413AD3166BE17000F1AAF5 /* TorrentsServiceAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 11413AD2166BE17000F1AAF5 /* TorrentsServiceAssistant.m */; };
+		11413AD5166BE55200F1AAF5 /* Transmission.icns in Resources */ = {isa = PBXBuildFile; fileRef = 11413AD4166BE55200F1AAF5 /* Transmission.icns */; };
+		11413AD7166BE5BD00F1AAF5 /* TransmissionDocument.icns in Resources */ = {isa = PBXBuildFile; fileRef = 11413AD6166BE5BD00F1AAF5 /* TransmissionDocument.icns */; };
+		114E7570166BEED400190138 /* Torrent+Statusing.m in Sources */ = {isa = PBXBuildFile; fileRef = 114E756F166BEED400190138 /* Torrent+Statusing.m */; };
+		117899F8167499D600CF32DD /* TorrentParentedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 117899F7167499D600CF32DD /* TorrentParentedFile.m */; };
+		11922BE316862ECA00979648 /* TorrentMoveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11922BE216862ECA00979648 /* TorrentMoveController.m */; };
+		11922BE916862F0200979648 /* TorrentMove.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11922BE716862F0200979648 /* TorrentMove.xib */; };
+		119EE765166B4C7D00659FAF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119EE764166B4C7D00659FAF /* Cocoa.framework */; };
+		119EE771166B4C7D00659FAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE770166B4C7D00659FAF /* main.m */; };
+		119EE7A6166B4E6700659FAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE78D166B4E6700659FAF /* AppDelegate.m */; };
+		119EE7A7166B4E6700659FAF /* NSByteSpeedFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE790166B4E6700659FAF /* NSByteSpeedFormatter.m */; };
+		119EE7A8166B4E6700659FAF /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE792166B4E6700659FAF /* NSData+Base64.m */; };
+		119EE7A9166B4E6700659FAF /* NSInfinityNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE794166B4E6700659FAF /* NSInfinityNumberFormatter.m */; };
+		119EE7AA166B4E6700659FAF /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE796166B4E6700659FAF /* NSMutableArray+QueueAdditions.m */; };
+		119EE7AB166B4E6700659FAF /* NSTimeRemainFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE798166B4E6700659FAF /* NSTimeRemainFormatter.m */; };
+		119EE7AC166B4E6700659FAF /* AppOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE79B166B4E6700659FAF /* AppOptions.m */; };
+		119EE7AD166B4E6700659FAF /* ConnectOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE79D166B4E6700659FAF /* ConnectOptions.m */; };
+		119EE7AE166B4E6700659FAF /* ServerStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE79F166B4E6700659FAF /* ServerStatus.m */; };
+		119EE7AF166B4E6700659FAF /* Torrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE7A1166B4E6700659FAF /* Torrent.m */; };
+		119EE7B0166B4E6700659FAF /* TorrentFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE7A3166B4E6700659FAF /* TorrentFile.m */; };
+		119EE7CF166B4E6E00659FAF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7B3166B4E6E00659FAF /* Credits.rtf */; };
+		119EE7D0166B4E6E00659FAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7B5166B4E6E00659FAF /* InfoPlist.strings */; };
+		119EE7D1166B4E6E00659FAF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7B7166B4E6E00659FAF /* MainMenu.xib */; };
+		119EE7D2166B4E6E00659FAF /* BlueDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7BA166B4E6E00659FAF /* BlueDot.png */; };
+		119EE7D3166B4E6E00659FAF /* DownArrowGroupTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7BB166B4E6E00659FAF /* DownArrowGroupTemplate.png */; };
+		119EE7D4166B4E6E00659FAF /* DownArrowTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7BC166B4E6E00659FAF /* DownArrowTemplate.png */; };
+		119EE7D5166B4E6E00659FAF /* GrayDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7BD166B4E6E00659FAF /* GrayDot.png */; };
+		119EE7D6166B4E6E00659FAF /* GreenDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7BE166B4E6E00659FAF /* GreenDot.png */; };
+		119EE7D7166B4E6E00659FAF /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7BF166B4E6E00659FAF /* Pause.png */; };
+		119EE7D8166B4E6E00659FAF /* PurpleDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C0166B4E6E00659FAF /* PurpleDot.png */; };
+		119EE7D9166B4E6E00659FAF /* RedDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C1166B4E6E00659FAF /* RedDot.png */; };
+		119EE7DA166B4E6E00659FAF /* Resume.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C2166B4E6E00659FAF /* Resume.png */; };
+		119EE7DB166B4E6E00659FAF /* ResumeNoWait.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C3166B4E6E00659FAF /* ResumeNoWait.png */; };
+		119EE7DC166B4E6E00659FAF /* ToolbarOpenWebTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C4166B4E6E00659FAF /* ToolbarOpenWebTemplate.png */; };
+		119EE7DD166B4E6E00659FAF /* ToolbarPauseSelectedTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C5166B4E6E00659FAF /* ToolbarPauseSelectedTemplate.png */; };
+		119EE7DE166B4E6E00659FAF /* ToolbarRemoveTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C6166B4E6E00659FAF /* ToolbarRemoveTemplate.png */; };
+		119EE7DF166B4E6E00659FAF /* ToolbarResumeSelectedTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C7166B4E6E00659FAF /* ToolbarResumeSelectedTemplate.png */; };
+		119EE7E0166B4E6E00659FAF /* TurtleTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C8166B4E6E00659FAF /* TurtleTemplate.png */; };
+		119EE7E1166B4E6E00659FAF /* UpArrowGroupTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7C9166B4E6E00659FAF /* UpArrowGroupTemplate.png */; };
+		119EE7E2166B4E6E00659FAF /* UpArrowTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7CA166B4E6E00659FAF /* UpArrowTemplate.png */; };
+		119EE7E3166B4E6E00659FAF /* YellowDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 119EE7CB166B4E6E00659FAF /* YellowDot.png */; };
+		119EE7E9166B545100659FAF /* RpcRequestHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE7E8166B545100659FAF /* RpcRequestHeader.m */; };
+		119EE7EC166B561700659FAF /* RpcProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE7EB166B561700659FAF /* RpcProtocol.m */; };
+		119EE7F2166B6C4200659FAF /* RpcServiceAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE7F1166B6C4200659FAF /* RpcServiceAssistant.m */; };
+		119EE7F5166B6C8500659FAF /* CoreService.m in Sources */ = {isa = PBXBuildFile; fileRef = 119EE7F4166B6C8500659FAF /* CoreService.m */; };
+		11B4ACF816B9AC5A005312A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11B4ACFA16B9AC5A005312A3 /* Localizable.strings */; };
+		11E97B2616C7EC87005DF98D /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E97B2316C7EC87005DF98D /* MASPreferencesWindow.xib */; };
+		11E97B2716C7EC87005DF98D /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E97B2516C7EC87005DF98D /* MASPreferencesWindowController.m */; };
+		11E97B2E16C7F4F9005DF98D /* NetworkPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E97B2C16C7F4F9005DF98D /* NetworkPreferencesViewController.m */; };
+		11E97B3316C8076C005DF98D /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E97B3116C8076C005DF98D /* AdvancedPreferencesViewController.m */; };
+		11E97B3516C80990005DF98D /* AdvancedPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E97B3716C80990005DF98D /* AdvancedPreferencesView.xib */; };
+		11E97B3916C809C1005DF98D /* NetworkPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E97B3B16C809C1005DF98D /* NetworkPreferencesView.xib */; };
+		11EAE950166E71AC0053A777 /* BlueGreenDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 11EAE94F166E71AC0053A777 /* BlueGreenDot.png */; };
+		11FADD2C1671295C00C92CBD /* TorrentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FADD2A1671295C00C92CBD /* TorrentController.m */; };
+		11FADD30167129AC00C92CBD /* TorrentWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FADD2E167129AC00C92CBD /* TorrentWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		110F96DB166B7AC000CC6070 /* RpcRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RpcRequest.h; sourceTree = "<group>"; };
+		110F96DC166B7AC000CC6070 /* RpcRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RpcRequest.m; sourceTree = "<group>"; };
+		110F96DF166B7F5400CC6070 /* RpcProtocolDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RpcProtocolDelegate.h; sourceTree = "<group>"; };
+		110F96E0166B819B00CC6070 /* RpcServiceAssistantDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RpcServiceAssistantDelegate.h; sourceTree = "<group>"; };
+		110F96E2166B844D00CC6070 /* OptionsServiceAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsServiceAssistant.h; sourceTree = "<group>"; };
+		110F96E3166B844D00CC6070 /* OptionsServiceAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsServiceAssistant.m; sourceTree = "<group>"; };
+		11413AD0166BE17000F1AAF5 /* TorrentServiceAssistantDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentServiceAssistantDelegate.h; sourceTree = "<group>"; };
+		11413AD1166BE17000F1AAF5 /* TorrentsServiceAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentsServiceAssistant.h; sourceTree = "<group>"; };
+		11413AD2166BE17000F1AAF5 /* TorrentsServiceAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentsServiceAssistant.m; sourceTree = "<group>"; };
+		11413AD4166BE55200F1AAF5 /* Transmission.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Transmission.icns; sourceTree = "<group>"; };
+		11413AD6166BE5BD00F1AAF5 /* TransmissionDocument.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TransmissionDocument.icns; sourceTree = "<group>"; };
+		114E756E166BEED400190138 /* Torrent+Statusing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Torrent+Statusing.h"; sourceTree = "<group>"; };
+		114E756F166BEED400190138 /* Torrent+Statusing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Torrent+Statusing.m"; sourceTree = "<group>"; };
+		117899F6167499D600CF32DD /* TorrentParentedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentParentedFile.h; sourceTree = "<group>"; };
+		117899F7167499D600CF32DD /* TorrentParentedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentParentedFile.m; sourceTree = "<group>"; };
+		11922BE116862ECA00979648 /* TorrentMoveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentMoveController.h; sourceTree = "<group>"; };
+		11922BE216862ECA00979648 /* TorrentMoveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentMoveController.m; sourceTree = "<group>"; };
+		11922BE816862F0200979648 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TorrentMove.xib; sourceTree = "<group>"; };
+		119EE760166B4C7D00659FAF /* TransmissionRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmissionRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		119EE764166B4C7D00659FAF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		119EE767166B4C7D00659FAF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		119EE768166B4C7D00659FAF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		119EE769166B4C7D00659FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		119EE76C166B4C7D00659FAF /* TransmissionRemote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TransmissionRemote-Info.plist"; sourceTree = "<group>"; };
+		119EE770166B4C7D00659FAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		119EE772166B4C7D00659FAF /* TransmissionRemote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TransmissionRemote-Prefix.pch"; sourceTree = "<group>"; };
+		119EE78C166B4E6700659FAF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		119EE78D166B4E6700659FAF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		119EE78F166B4E6700659FAF /* NSByteSpeedFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSByteSpeedFormatter.h; sourceTree = "<group>"; };
+		119EE790166B4E6700659FAF /* NSByteSpeedFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSByteSpeedFormatter.m; sourceTree = "<group>"; };
+		119EE791166B4E6700659FAF /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		119EE792166B4E6700659FAF /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		119EE793166B4E6700659FAF /* NSInfinityNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSInfinityNumberFormatter.h; sourceTree = "<group>"; };
+		119EE794166B4E6700659FAF /* NSInfinityNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSInfinityNumberFormatter.m; sourceTree = "<group>"; };
+		119EE795166B4E6700659FAF /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
+		119EE796166B4E6700659FAF /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
+		119EE797166B4E6700659FAF /* NSTimeRemainFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimeRemainFormatter.h; sourceTree = "<group>"; };
+		119EE798166B4E6700659FAF /* NSTimeRemainFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimeRemainFormatter.m; sourceTree = "<group>"; };
+		119EE79A166B4E6700659FAF /* AppOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOptions.h; sourceTree = "<group>"; };
+		119EE79B166B4E6700659FAF /* AppOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppOptions.m; sourceTree = "<group>"; };
+		119EE79C166B4E6700659FAF /* ConnectOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectOptions.h; sourceTree = "<group>"; };
+		119EE79D166B4E6700659FAF /* ConnectOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectOptions.m; sourceTree = "<group>"; };
+		119EE79E166B4E6700659FAF /* ServerStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerStatus.h; sourceTree = "<group>"; };
+		119EE79F166B4E6700659FAF /* ServerStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerStatus.m; sourceTree = "<group>"; };
+		119EE7A0166B4E6700659FAF /* Torrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Torrent.h; sourceTree = "<group>"; };
+		119EE7A1166B4E6700659FAF /* Torrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torrent.m; sourceTree = "<group>"; };
+		119EE7A2166B4E6700659FAF /* TorrentFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentFile.h; sourceTree = "<group>"; };
+		119EE7A3166B4E6700659FAF /* TorrentFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentFile.m; sourceTree = "<group>"; };
+		119EE7B4166B4E6E00659FAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		119EE7B6166B4E6E00659FAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		119EE7B8166B4E6E00659FAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		119EE7BA166B4E6E00659FAF /* BlueDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueDot.png; sourceTree = "<group>"; };
+		119EE7BB166B4E6E00659FAF /* DownArrowGroupTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownArrowGroupTemplate.png; sourceTree = "<group>"; };
+		119EE7BC166B4E6E00659FAF /* DownArrowTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownArrowTemplate.png; sourceTree = "<group>"; };
+		119EE7BD166B4E6E00659FAF /* GrayDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrayDot.png; sourceTree = "<group>"; };
+		119EE7BE166B4E6E00659FAF /* GreenDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenDot.png; sourceTree = "<group>"; };
+		119EE7BF166B4E6E00659FAF /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
+		119EE7C0166B4E6E00659FAF /* PurpleDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PurpleDot.png; sourceTree = "<group>"; };
+		119EE7C1166B4E6E00659FAF /* RedDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedDot.png; sourceTree = "<group>"; };
+		119EE7C2166B4E6E00659FAF /* Resume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Resume.png; sourceTree = "<group>"; };
+		119EE7C3166B4E6E00659FAF /* ResumeNoWait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResumeNoWait.png; sourceTree = "<group>"; };
+		119EE7C4166B4E6E00659FAF /* ToolbarOpenWebTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarOpenWebTemplate.png; sourceTree = "<group>"; };
+		119EE7C5166B4E6E00659FAF /* ToolbarPauseSelectedTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarPauseSelectedTemplate.png; sourceTree = "<group>"; };
+		119EE7C6166B4E6E00659FAF /* ToolbarRemoveTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarRemoveTemplate.png; sourceTree = "<group>"; };
+		119EE7C7166B4E6E00659FAF /* ToolbarResumeSelectedTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarResumeSelectedTemplate.png; sourceTree = "<group>"; };
+		119EE7C8166B4E6E00659FAF /* TurtleTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TurtleTemplate.png; sourceTree = "<group>"; };
+		119EE7C9166B4E6E00659FAF /* UpArrowGroupTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpArrowGroupTemplate.png; sourceTree = "<group>"; };
+		119EE7CA166B4E6E00659FAF /* UpArrowTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpArrowTemplate.png; sourceTree = "<group>"; };
+		119EE7CB166B4E6E00659FAF /* YellowDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowDot.png; sourceTree = "<group>"; };
+		119EE7E7166B545100659FAF /* RpcRequestHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RpcRequestHeader.h; sourceTree = "<group>"; };
+		119EE7E8166B545100659FAF /* RpcRequestHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RpcRequestHeader.m; sourceTree = "<group>"; };
+		119EE7EA166B561700659FAF /* RpcProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RpcProtocol.h; sourceTree = "<group>"; };
+		119EE7EB166B561700659FAF /* RpcProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RpcProtocol.m; sourceTree = "<group>"; };
+		119EE7ED166B5FA800659FAF /* RpcRequestType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RpcRequestType.h; sourceTree = "<group>"; };
+		119EE7EF166B641200659FAF /* RpcRequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RpcRequestDelegate.h; sourceTree = "<group>"; };
+		119EE7F0166B6C4200659FAF /* RpcServiceAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RpcServiceAssistant.h; sourceTree = "<group>"; };
+		119EE7F1166B6C4200659FAF /* RpcServiceAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RpcServiceAssistant.m; sourceTree = "<group>"; };
+		119EE7F3166B6C8500659FAF /* CoreService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreService.h; sourceTree = "<group>"; };
+		119EE7F4166B6C8500659FAF /* CoreService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreService.m; sourceTree = "<group>"; };
+		11B4ACF216B9AC18005312A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/TorrentMove.xib; sourceTree = "<group>"; };
+		11B4ACF316B9AC18005312A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		11B4ACF516B9AC18005312A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/TorrentWindow.xib; sourceTree = "<group>"; };
+		11B4ACF616B9AC18005312A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		11B4ACF716B9AC18005312A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11B4ACF916B9AC5A005312A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		11B4ACFB16B9AC5E005312A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		11E97B2216C7EC87005DF98D /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
+		11E97B2316C7EC87005DF98D /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		11E97B2416C7EC87005DF98D /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		11E97B2516C7EC87005DF98D /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		11E97B2B16C7F4F9005DF98D /* NetworkPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkPreferencesViewController.h; sourceTree = "<group>"; };
+		11E97B2C16C7F4F9005DF98D /* NetworkPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkPreferencesViewController.m; sourceTree = "<group>"; };
+		11E97B3016C8076C005DF98D /* AdvancedPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedPreferencesViewController.h; sourceTree = "<group>"; };
+		11E97B3116C8076C005DF98D /* AdvancedPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewController.m; sourceTree = "<group>"; };
+		11E97B3616C80990005DF98D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AdvancedPreferencesView.xib; sourceTree = "<group>"; };
+		11E97B3816C80995005DF98D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/AdvancedPreferencesView.xib; sourceTree = "<group>"; };
+		11E97B3A16C809C1005DF98D /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/NetworkPreferencesView.xib; sourceTree = "<group>"; };
+		11E97B3C16C809C6005DF98D /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/NetworkPreferencesView.xib; sourceTree = "<group>"; };
+		11EAE94F166E71AC0053A777 /* BlueGreenDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueGreenDot.png; sourceTree = "<group>"; };
+		11FADD291671295C00C92CBD /* TorrentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentController.h; sourceTree = "<group>"; };
+		11FADD2A1671295C00C92CBD /* TorrentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentController.m; sourceTree = "<group>"; };
+		11FADD2F167129AC00C92CBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TorrentWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		119EE75D166B4C7D00659FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119EE765166B4C7D00659FAF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		110F96E1166B841700CC6070 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				110F96E2166B844D00CC6070 /* OptionsServiceAssistant.h */,
+				110F96E3166B844D00CC6070 /* OptionsServiceAssistant.m */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		11413ACA166BBF9300F1AAF5 /* Torrents */ = {
+			isa = PBXGroup;
+			children = (
+				11413AD0166BE17000F1AAF5 /* TorrentServiceAssistantDelegate.h */,
+				11413AD1166BE17000F1AAF5 /* TorrentsServiceAssistant.h */,
+				11413AD2166BE17000F1AAF5 /* TorrentsServiceAssistant.m */,
+			);
+			path = Torrents;
+			sourceTree = "<group>";
+		};
+		117899F41674996B00CF32DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				117899F6167499D600CF32DD /* TorrentParentedFile.h */,
+				117899F7167499D600CF32DD /* TorrentParentedFile.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		119EE755166B4C7D00659FAF = {
+			isa = PBXGroup;
+			children = (
+				11E97B2116C7EC48005DF98D /* MASPreferences */,
+				11413AD4166BE55200F1AAF5 /* Transmission.icns */,
+				11413AD6166BE5BD00F1AAF5 /* TransmissionDocument.icns */,
+				119EE76A166B4C7D00659FAF /* TransmissionRemote */,
+				119EE763166B4C7D00659FAF /* Frameworks */,
+				119EE761166B4C7D00659FAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		119EE761166B4C7D00659FAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				119EE760166B4C7D00659FAF /* TransmissionRemote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		119EE763166B4C7D00659FAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				119EE764166B4C7D00659FAF /* Cocoa.framework */,
+				119EE766166B4C7D00659FAF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		119EE766166B4C7D00659FAF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				119EE767166B4C7D00659FAF /* AppKit.framework */,
+				119EE768166B4C7D00659FAF /* CoreData.framework */,
+				119EE769166B4C7D00659FAF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		119EE76A166B4C7D00659FAF /* TransmissionRemote */ = {
+			isa = PBXGroup;
+			children = (
+				119EE78A166B4E6700659FAF /* Core */,
+				119EE7B1166B4E6E00659FAF /* GUI */,
+				119EE76B166B4C7D00659FAF /* Supporting Files */,
+			);
+			path = TransmissionRemote;
+			sourceTree = "<group>";
+		};
+		119EE76B166B4C7D00659FAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				119EE7B3166B4E6E00659FAF /* Credits.rtf */,
+				119EE7B5166B4E6E00659FAF /* InfoPlist.strings */,
+				119EE76C166B4C7D00659FAF /* TransmissionRemote-Info.plist */,
+				119EE770166B4C7D00659FAF /* main.m */,
+				119EE772166B4C7D00659FAF /* TransmissionRemote-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		119EE78A166B4E6700659FAF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				119EE78B166B4E6700659FAF /* App */,
+				119EE78E166B4E6700659FAF /* Classes */,
+				119EE799166B4E6700659FAF /* Models */,
+				119EE7A4166B4E6700659FAF /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		119EE78B166B4E6700659FAF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				119EE78C166B4E6700659FAF /* AppDelegate.h */,
+				119EE78D166B4E6700659FAF /* AppDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		119EE78E166B4E6700659FAF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				119EE78F166B4E6700659FAF /* NSByteSpeedFormatter.h */,
+				119EE790166B4E6700659FAF /* NSByteSpeedFormatter.m */,
+				119EE791166B4E6700659FAF /* NSData+Base64.h */,
+				119EE792166B4E6700659FAF /* NSData+Base64.m */,
+				119EE793166B4E6700659FAF /* NSInfinityNumberFormatter.h */,
+				119EE794166B4E6700659FAF /* NSInfinityNumberFormatter.m */,
+				119EE795166B4E6700659FAF /* NSMutableArray+QueueAdditions.h */,
+				119EE796166B4E6700659FAF /* NSMutableArray+QueueAdditions.m */,
+				119EE797166B4E6700659FAF /* NSTimeRemainFormatter.h */,
+				119EE798166B4E6700659FAF /* NSTimeRemainFormatter.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		119EE799166B4E6700659FAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				119EE79A166B4E6700659FAF /* AppOptions.h */,
+				119EE79B166B4E6700659FAF /* AppOptions.m */,
+				119EE79C166B4E6700659FAF /* ConnectOptions.h */,
+				119EE79D166B4E6700659FAF /* ConnectOptions.m */,
+				119EE79E166B4E6700659FAF /* ServerStatus.h */,
+				119EE79F166B4E6700659FAF /* ServerStatus.m */,
+				119EE7A0166B4E6700659FAF /* Torrent.h */,
+				119EE7A1166B4E6700659FAF /* Torrent.m */,
+				119EE7A2166B4E6700659FAF /* TorrentFile.h */,
+				119EE7A3166B4E6700659FAF /* TorrentFile.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		119EE7A4166B4E6700659FAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				11413ACA166BBF9300F1AAF5 /* Torrents */,
+				110F96E1166B841700CC6070 /* Options */,
+				119EE7A5166B4E6700659FAF /* Rpc */,
+				119EE7F3166B6C8500659FAF /* CoreService.h */,
+				119EE7F4166B6C8500659FAF /* CoreService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		119EE7A5166B4E6700659FAF /* Rpc */ = {
+			isa = PBXGroup;
+			children = (
+				110F96DF166B7F5400CC6070 /* RpcProtocolDelegate.h */,
+				119EE7EF166B641200659FAF /* RpcRequestDelegate.h */,
+				110F96E0166B819B00CC6070 /* RpcServiceAssistantDelegate.h */,
+				119EE7ED166B5FA800659FAF /* RpcRequestType.h */,
+				119EE7E7166B545100659FAF /* RpcRequestHeader.h */,
+				119EE7E8166B545100659FAF /* RpcRequestHeader.m */,
+				110F96DB166B7AC000CC6070 /* RpcRequest.h */,
+				110F96DC166B7AC000CC6070 /* RpcRequest.m */,
+				119EE7EA166B561700659FAF /* RpcProtocol.h */,
+				119EE7EB166B561700659FAF /* RpcProtocol.m */,
+				119EE7F0166B6C4200659FAF /* RpcServiceAssistant.h */,
+				119EE7F1166B6C4200659FAF /* RpcServiceAssistant.m */,
+			);
+			path = Rpc;
+			sourceTree = "<group>";
+		};
+		119EE7B1166B4E6E00659FAF /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				119EE7B2166B4E6E00659FAF /* Resources */,
+				119EE7CC166B4E6E00659FAF /* Sources */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		119EE7B2166B4E6E00659FAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11E97B2A16C7EF8D005DF98D /* Preferences */,
+				11922BE716862F0200979648 /* TorrentMove.xib */,
+				119EE7B7166B4E6E00659FAF /* MainMenu.xib */,
+				11FADD2E167129AC00C92CBD /* TorrentWindow.xib */,
+				11B4ACFA16B9AC5A005312A3 /* Localizable.strings */,
+				119EE7B9166B4E6E00659FAF /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		119EE7B9166B4E6E00659FAF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				11EAE94F166E71AC0053A777 /* BlueGreenDot.png */,
+				119EE7BA166B4E6E00659FAF /* BlueDot.png */,
+				119EE7BB166B4E6E00659FAF /* DownArrowGroupTemplate.png */,
+				119EE7BC166B4E6E00659FAF /* DownArrowTemplate.png */,
+				119EE7BD166B4E6E00659FAF /* GrayDot.png */,
+				119EE7BE166B4E6E00659FAF /* GreenDot.png */,
+				119EE7BF166B4E6E00659FAF /* Pause.png */,
+				119EE7C0166B4E6E00659FAF /* PurpleDot.png */,
+				119EE7C1166B4E6E00659FAF /* RedDot.png */,
+				119EE7C2166B4E6E00659FAF /* Resume.png */,
+				119EE7C3166B4E6E00659FAF /* ResumeNoWait.png */,
+				119EE7C4166B4E6E00659FAF /* ToolbarOpenWebTemplate.png */,
+				119EE7C5166B4E6E00659FAF /* ToolbarPauseSelectedTemplate.png */,
+				119EE7C6166B4E6E00659FAF /* ToolbarRemoveTemplate.png */,
+				119EE7C7166B4E6E00659FAF /* ToolbarResumeSelectedTemplate.png */,
+				119EE7C8166B4E6E00659FAF /* TurtleTemplate.png */,
+				119EE7C9166B4E6E00659FAF /* UpArrowGroupTemplate.png */,
+				119EE7CA166B4E6E00659FAF /* UpArrowTemplate.png */,
+				119EE7CB166B4E6E00659FAF /* YellowDot.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		119EE7CC166B4E6E00659FAF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				117899F41674996B00CF32DD /* Models */,
+				119EE7CD166B4E6E00659FAF /* Categories */,
+				119EE7CE166B4E6E00659FAF /* Controllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		119EE7CD166B4E6E00659FAF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				114E756E166BEED400190138 /* Torrent+Statusing.h */,
+				114E756F166BEED400190138 /* Torrent+Statusing.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		119EE7CE166B4E6E00659FAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11E97B2916C7EF6B005DF98D /* Preferences */,
+				11FADD291671295C00C92CBD /* TorrentController.h */,
+				11FADD2A1671295C00C92CBD /* TorrentController.m */,
+				11922BE116862ECA00979648 /* TorrentMoveController.h */,
+				11922BE216862ECA00979648 /* TorrentMoveController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		11E97B2116C7EC48005DF98D /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				11E97B2216C7EC87005DF98D /* MASPreferencesViewController.h */,
+				11E97B2316C7EC87005DF98D /* MASPreferencesWindow.xib */,
+				11E97B2416C7EC87005DF98D /* MASPreferencesWindowController.h */,
+				11E97B2516C7EC87005DF98D /* MASPreferencesWindowController.m */,
+			);
+			path = MASPreferences;
+			sourceTree = "<group>";
+		};
+		11E97B2916C7EF6B005DF98D /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				11E97B2B16C7F4F9005DF98D /* NetworkPreferencesViewController.h */,
+				11E97B2C16C7F4F9005DF98D /* NetworkPreferencesViewController.m */,
+				11E97B3016C8076C005DF98D /* AdvancedPreferencesViewController.h */,
+				11E97B3116C8076C005DF98D /* AdvancedPreferencesViewController.m */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		11E97B2A16C7EF8D005DF98D /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				11E97B3B16C809C1005DF98D /* NetworkPreferencesView.xib */,
+				11E97B3716C80990005DF98D /* AdvancedPreferencesView.xib */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		119EE75F166B4C7D00659FAF /* TransmissionRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 119EE77E166B4C7E00659FAF /* Build configuration list for PBXNativeTarget "TransmissionRemote" */;
+			buildPhases = (
+				119EE75C166B4C7D00659FAF /* Sources */,
+				119EE75D166B4C7D00659FAF /* Frameworks */,
+				119EE75E166B4C7D00659FAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransmissionRemote;
+			productName = TransmissionRemote;
+			productReference = 119EE760166B4C7D00659FAF /* TransmissionRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		119EE757166B4C7D00659FAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = TurchenkoAlex;
+			};
+			buildConfigurationList = 119EE75A166B4C7D00659FAF /* Build configuration list for PBXProject "TransmissionRemote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+			);
+			mainGroup = 119EE755166B4C7D00659FAF;
+			productRefGroup = 119EE761166B4C7D00659FAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				119EE75F166B4C7D00659FAF /* TransmissionRemote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		119EE75E166B4C7D00659FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119EE7CF166B4E6E00659FAF /* Credits.rtf in Resources */,
+				119EE7D0166B4E6E00659FAF /* InfoPlist.strings in Resources */,
+				119EE7D1166B4E6E00659FAF /* MainMenu.xib in Resources */,
+				119EE7D2166B4E6E00659FAF /* BlueDot.png in Resources */,
+				119EE7D3166B4E6E00659FAF /* DownArrowGroupTemplate.png in Resources */,
+				119EE7D4166B4E6E00659FAF /* DownArrowTemplate.png in Resources */,
+				119EE7D5166B4E6E00659FAF /* GrayDot.png in Resources */,
+				119EE7D6166B4E6E00659FAF /* GreenDot.png in Resources */,
+				119EE7D7166B4E6E00659FAF /* Pause.png in Resources */,
+				119EE7D8166B4E6E00659FAF /* PurpleDot.png in Resources */,
+				119EE7D9166B4E6E00659FAF /* RedDot.png in Resources */,
+				119EE7DA166B4E6E00659FAF /* Resume.png in Resources */,
+				119EE7DB166B4E6E00659FAF /* ResumeNoWait.png in Resources */,
+				119EE7DC166B4E6E00659FAF /* ToolbarOpenWebTemplate.png in Resources */,
+				119EE7DD166B4E6E00659FAF /* ToolbarPauseSelectedTemplate.png in Resources */,
+				119EE7DE166B4E6E00659FAF /* ToolbarRemoveTemplate.png in Resources */,
+				119EE7DF166B4E6E00659FAF /* ToolbarResumeSelectedTemplate.png in Resources */,
+				119EE7E0166B4E6E00659FAF /* TurtleTemplate.png in Resources */,
+				119EE7E1166B4E6E00659FAF /* UpArrowGroupTemplate.png in Resources */,
+				119EE7E2166B4E6E00659FAF /* UpArrowTemplate.png in Resources */,
+				119EE7E3166B4E6E00659FAF /* YellowDot.png in Resources */,
+				11413AD5166BE55200F1AAF5 /* Transmission.icns in Resources */,
+				11413AD7166BE5BD00F1AAF5 /* TransmissionDocument.icns in Resources */,
+				11EAE950166E71AC0053A777 /* BlueGreenDot.png in Resources */,
+				11FADD30167129AC00C92CBD /* TorrentWindow.xib in Resources */,
+				11922BE916862F0200979648 /* TorrentMove.xib in Resources */,
+				11B4ACF816B9AC5A005312A3 /* Localizable.strings in Resources */,
+				11E97B2616C7EC87005DF98D /* MASPreferencesWindow.xib in Resources */,
+				11E97B3916C809C1005DF98D /* NetworkPreferencesView.xib in Resources */,
+				11E97B3516C80990005DF98D /* AdvancedPreferencesView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		119EE75C166B4C7D00659FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119EE771166B4C7D00659FAF /* main.m in Sources */,
+				119EE7A6166B4E6700659FAF /* AppDelegate.m in Sources */,
+				119EE7A7166B4E6700659FAF /* NSByteSpeedFormatter.m in Sources */,
+				119EE7A8166B4E6700659FAF /* NSData+Base64.m in Sources */,
+				119EE7A9166B4E6700659FAF /* NSInfinityNumberFormatter.m in Sources */,
+				119EE7AA166B4E6700659FAF /* NSMutableArray+QueueAdditions.m in Sources */,
+				119EE7AB166B4E6700659FAF /* NSTimeRemainFormatter.m in Sources */,
+				119EE7AC166B4E6700659FAF /* AppOptions.m in Sources */,
+				119EE7AD166B4E6700659FAF /* ConnectOptions.m in Sources */,
+				119EE7AE166B4E6700659FAF /* ServerStatus.m in Sources */,
+				119EE7AF166B4E6700659FAF /* Torrent.m in Sources */,
+				119EE7B0166B4E6700659FAF /* TorrentFile.m in Sources */,
+				119EE7E9166B545100659FAF /* RpcRequestHeader.m in Sources */,
+				119EE7EC166B561700659FAF /* RpcProtocol.m in Sources */,
+				119EE7F2166B6C4200659FAF /* RpcServiceAssistant.m in Sources */,
+				119EE7F5166B6C8500659FAF /* CoreService.m in Sources */,
+				110F96DD166B7AC000CC6070 /* RpcRequest.m in Sources */,
+				110F96E4166B844D00CC6070 /* OptionsServiceAssistant.m in Sources */,
+				11413AD3166BE17000F1AAF5 /* TorrentsServiceAssistant.m in Sources */,
+				114E7570166BEED400190138 /* Torrent+Statusing.m in Sources */,
+				11FADD2C1671295C00C92CBD /* TorrentController.m in Sources */,
+				117899F8167499D600CF32DD /* TorrentParentedFile.m in Sources */,
+				11922BE316862ECA00979648 /* TorrentMoveController.m in Sources */,
+				11E97B2716C7EC87005DF98D /* MASPreferencesWindowController.m in Sources */,
+				11E97B2E16C7F4F9005DF98D /* NetworkPreferencesViewController.m in Sources */,
+				11E97B3316C8076C005DF98D /* AdvancedPreferencesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		11922BE716862F0200979648 /* TorrentMove.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11922BE816862F0200979648 /* en */,
+				11B4ACF216B9AC18005312A3 /* ru */,
+			);
+			name = TorrentMove.xib;
+			sourceTree = "<group>";
+		};
+		119EE7B3166B4E6E00659FAF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				119EE7B4166B4E6E00659FAF /* en */,
+				11B4ACF616B9AC18005312A3 /* ru */,
+			);
+			name = Credits.rtf;
+			path = GUI/Resources;
+			sourceTree = "<group>";
+		};
+		119EE7B5166B4E6E00659FAF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				119EE7B6166B4E6E00659FAF /* en */,
+				11B4ACF716B9AC18005312A3 /* ru */,
+			);
+			name = InfoPlist.strings;
+			path = GUI/Resources;
+			sourceTree = "<group>";
+		};
+		119EE7B7166B4E6E00659FAF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				119EE7B8166B4E6E00659FAF /* en */,
+				11B4ACF316B9AC18005312A3 /* ru */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		11B4ACFA16B9AC5A005312A3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11B4ACF916B9AC5A005312A3 /* ru */,
+				11B4ACFB16B9AC5E005312A3 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		11E97B3716C80990005DF98D /* AdvancedPreferencesView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11E97B3616C80990005DF98D /* en */,
+				11E97B3816C80995005DF98D /* ru */,
+			);
+			name = AdvancedPreferencesView.xib;
+			path = ../../Sources/Controllers/Preferences;
+			sourceTree = "<group>";
+		};
+		11E97B3B16C809C1005DF98D /* NetworkPreferencesView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11E97B3A16C809C1005DF98D /* en */,
+				11E97B3C16C809C6005DF98D /* ru */,
+			);
+			name = NetworkPreferencesView.xib;
+			path = ../../Sources/Controllers/Preferences;
+			sourceTree = "<group>";
+		};
+		11FADD2E167129AC00C92CBD /* TorrentWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11FADD2F167129AC00C92CBD /* en */,
+				11B4ACF516B9AC18005312A3 /* ru */,
+			);
+			name = TorrentWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		119EE77C166B4C7E00659FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		119EE77D166B4C7E00659FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		119EE77F166B4C7E00659FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TransmissionRemote/TransmissionRemote-Prefix.pch";
+				INFOPLIST_FILE = "TransmissionRemote/TransmissionRemote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		119EE780166B4C7E00659FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TransmissionRemote/TransmissionRemote-Prefix.pch";
+				INFOPLIST_FILE = "TransmissionRemote/TransmissionRemote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		119EE75A166B4C7D00659FAF /* Build configuration list for PBXProject "TransmissionRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				119EE77C166B4C7E00659FAF /* Debug */,
+				119EE77D166B4C7E00659FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		119EE77E166B4C7E00659FAF /* Build configuration list for PBXNativeTarget "TransmissionRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				119EE77F166B4C7E00659FAF /* Debug */,
+				119EE780166B4C7E00659FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 119EE757166B4C7D00659FAF /* Project object */;
+}
