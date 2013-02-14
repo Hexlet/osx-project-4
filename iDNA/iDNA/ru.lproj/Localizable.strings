@@ -1,0 +1,13 @@
+"ALERT_PARAMETER_TITLE" = "%@ равен 0. ";
+"ALERT_PARAMETER_MESSAGE" = "Надо поправить. Ладненько?";
+"ALERT_PARAMETER_DEFAULT_BTN" = "Просто закройся";
+"ALERT_PARAMETER_ALT_BTN" = "Я понял";
+"ALERT_PARAMETER_OTHER_BTN" = "Другая кнопка";
+
+"ALERT_CLOSE_TITLE" = "Вы уверены, что хотите закрыть приложение?";
+"ALERT_CLOSE_MESSAGE" = "Нам было так весело!";
+"ALERT_CLOSE_DEFAULT_BTN" = "Закройся уже";
+"ALERT_CLOSE_ALT_BTN" = "Не надо, я передумал";
+
+"DNA_LENGTH" = "Размер ДНК";
+"POPULATION_SIZE" = "Размер популяции";
