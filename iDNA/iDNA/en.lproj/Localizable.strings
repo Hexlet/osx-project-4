@@ -1,0 +1,13 @@
+"ALERT_PARAMETER_TITLE" = "%@ is 0. ";
+"ALERT_PARAMETER_MESSAGE" = "Should be fixed. Mkay?";
+"ALERT_PARAMETER_DEFAULT_BTN" = "Just close";
+"ALERT_PARAMETER_ALT_BTN" = "Got it";
+"ALERT_PARAMETER_OTHER_BTN" = "Other button";
+
+"ALERT_CLOSE_TITLE" = "Do you really want to close this application?";
+"ALERT_CLOSE_MESSAGE" = "To be or not to be...";
+"ALERT_CLOSE_DEFAULT_BTN" = "Close now";
+"ALERT_CLOSE_ALT_BTN" = "No, bring me back";
+
+"DNA_LENGTH" = "DNA length";
+"POPULATION_SIZE" = "Population size";

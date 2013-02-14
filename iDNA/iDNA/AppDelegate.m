@@ -13,6 +13,8 @@
 	NSInteger maxPopulationSize;
 	NSInteger maxDnaLength;
 	NSInteger maxMutationRate;
+	
+	NSApplicationTerminateReply terminateReply;
 }
 
 - (id) init
@@ -26,6 +28,8 @@
 		dnaLength = maxDnaLength / 2;
 		mutationRate = maxMutationRate / 2;
 		populationSize = maxPopulationSize / 2;
+		
+		terminateReply = NSTerminateNow;
 	}
 	
 	return self;
@@ -95,11 +99,12 @@
 		if (populationSize == 0)
 			[title appendFormat:NSLocalizedString(@"ALERT_PARAMETER_TITLE", nil), NSLocalizedString(@"POPULATION_SIZE", nil)];
 		
-		[[NSAlert alertWithMessageText :	title
+		NSAlert *alert = [NSAlert alertWithMessageText :	title
 				defaultButton :				NSLocalizedString(@"ALERT_PARAMETER_DEFAULT_BTN", nil)
 				alternateButton :			NSLocalizedString(@"ALERT_PARAMETER_ALT_BTN", nil)
 				otherButton :				NSLocalizedString(@"ALERT_PARAMETER_OTHER_BTN", nil)
-				informativeTextWithFormat :	NSLocalizedString(@"ALERT_PARAMETER_MESSAGE", nil)] runModal];
+				informativeTextWithFormat :	NSLocalizedString(@"ALERT_PARAMETER_MESSAGE", nil)];
+		[alert beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:nil contextInfo:nil];
 	}
 }
 
@@ -227,9 +232,33 @@
 }
 
 // Close app if window is closed.
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
+- (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
-    return YES;
+    return NO;
+}
+
+-(void) alertClose:(NSAlert *)alert code:(NSInteger) choice context:(void *) ctx
+{
+	if (choice == NSAlertDefaultReturn)
+		terminateReply = NSTerminateNow;
+	else if (choice == NSAlertAlternateReturn)
+		terminateReply = NSTerminateLater;
+}
+
+//- (void) applicationWillTerminate: (NSNotification *)aNotification
+- (NSApplicationTerminateReply) applicationShouldTerminate:(NSApplication *) sender
+{
+	NSAlert *alert = [NSAlert alertWithMessageText : NSLocalizedString(@"ALERT_CLOSE_TITLE", nil)
+									 defaultButton : NSLocalizedString(@"ALERT_CLOSE_DEFAULT_BTN", nil)
+								   alternateButton : NSLocalizedString(@"ALERT_CLOSE_ALT_BTN", nil)
+									   otherButton : nil
+						 informativeTextWithFormat : NSLocalizedString(@"ALERT_CLOSE_MESSAGE", nil)];
+	//[alert beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:@selector(alertClose:code:context:) contextInfo:nil];
+	NSInteger result = [alert runModal];
+	if (result == NSAlertAlternateReturn)
+		return NSTerminateCancel;
+	else
+		return NSTerminateNow;
 }
 
 @end
