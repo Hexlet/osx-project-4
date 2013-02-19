@@ -14,10 +14,12 @@
 
 @property (assign) IBOutlet NSTableView *volumesTableView;
 @property (assign) IBOutlet NSTextView *detailsTextView;
+@property (assign) IBOutlet NSButton *disclosureButton;
 @property (readonly) NSString *vm_name;
 @property (readonly) NSString *vmdk_file_name;
 
 - (IBAction)createBootcampVM:(id)sender;
 - (IBAction)refresh:(id)sender;
+- (IBAction)expandCollapseLog:(id)sender;
 
 @end

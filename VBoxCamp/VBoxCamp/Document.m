@@ -15,11 +15,23 @@
 {
     self = [super init];
     if (self) {
-        volumes = [self volumesInfo];
-        _vm_name = @"BOOTCAMP_VM";
-        _vmdk_file_name = @"bootcampvm";
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        NSString *vbAppPath = @"/Applications/VirtualBox.app";
+        if ([fileMgr fileExistsAtPath:vbAppPath]) {
+            volumes = [self volumesInfo];
+            _vm_name = @"BOOTCAMP_VM";
+            _vmdk_file_name = @"bootcampvm";
+        } else {
+            NSAlert *alert = [NSAlert
+                              alertWithMessageText:NSLocalizedString(@"VB_APP_NOT_FOUND_MSG", "VB_APP_NOT_FOUND_MSG") defaultButton:NSLocalizedString(@"QUIT_BTN", "QUIT_BTN") alternateButton:nil otherButton:nil informativeTextWithFormat:NSLocalizedString(@"VB_APP_NOT_FOUND_INF", "VB_APP_NOT_FOUND_INF"), vbAppPath];
+            [alert beginSheetModalForWindow:[_volumesTableView window] modalDelegate:self didEndSelector:@selector(alertEnded:code:context:) contextInfo:NULL];
+        }
     }
     return self;
+}
+
+-(void)alertEnded:(NSAlert*)alert code:(NSInteger)choise context:(void*)v {
+    [[NSApplication  sharedApplication] terminate:nil];
 }
 
 - (NSArray *)volumesInfo {
@@ -151,6 +163,7 @@
             [create_vmdk_source appendString:@"\" with administrator privileges"];
             
             //Print details to console
+            [self appendTextToDetails:NSLocalizedString(@"CREATING_VMDK_MSG", "CREATING_VMDK_MSG")];
             [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), chmod_dev]];
             [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), cd_vm_dir]];
             [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), vbm_create]];
@@ -207,6 +220,7 @@
             [create_vm_source appendString:@"\""];
             
             //Print details to console
+            [self appendTextToDetails:NSLocalizedString(@"BUILDING_VB_CONFIG_MSG", "BUILDING_VB_CONFIG_MSG")];
             [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), vbm_createvm]];
             [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), vbm_modifyvm]];
             [self appendTextToDetails:[NSString stringWithFormat:NSLocalizedString(@"RUNNING_SCRIPT_MSG", "RUNNING_SCRIPT_MSG"), vbm_storagectl]];
@@ -219,6 +233,10 @@
                 
         }
     }
+}
+
+- (IBAction)expandCollapseLog:(id)sender {
+    [_detailsTextView setHidden:YES];
 }
 
 

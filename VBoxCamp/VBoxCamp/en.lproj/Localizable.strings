@@ -8,6 +8,11 @@
 
 "SELECT_PATH_MSG" = "Select path to keep BOOTCAMP virtual machine files";
 "SELECT_BTN" = "Select";
+"CREATING_VMDK_MSG" = "Creating VMDK disk from existing partition ...";
+"BUILDING_VB_CONFIG_MSG" = "Building VirtualBox configuration for new machine ..."; 
 "RUNNING_SCRIPT_MSG" = "Running script: %@ ...";
 "GETTING_INFO_MSG" = "Getting volumes information... Done.\n";
 "DONE_MSG" = "Done.";
+"QUIT_BTN" = "Quit";
+"VB_APP_NOT_FOUND_MSG" = "VirtualBox application not found.";
+"VB_APP_NOT_FOUND_INF" = "Application folder not found at %@.";
