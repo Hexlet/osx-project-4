@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  VBoxCamp
+
+  Created by Dmitriy Zavorokhin on 2/11/13.
+  Copyright (c) 2013 goodman116@gmail.com. All rights reserved.
+*/
+
+"SELECT_PATH_MSG" = "Укажите папку для хранения файлов виртуальной машины BOOTCAMP";
+"SELECT_BTN" = "Выбрать";
+"CREATING_VMDK_MSG" = "Создание VMDK-диска из существующего раздела ...";
+"BUILDING_VB_CONFIG_MSG" = "Настройка VirtualBox-конфигурации для новой машины ...";
+"RUNNING_SCRIPT_MSG" = "Выполнение команды: %@ ...";
+"GETTING_INFO_MSG" = "Сбор информации о дисках... Готово.\n";
+"DONE_MSG" = "Готово.";
+"QUIT_BTN" = "Выйти";
+"VB_APP_NOT_FOUND_MSG" = "Приложение VirtualBox не найдено.";
+"VB_APP_NOT_FOUND_INF" = "Папка приложения не найдена в %@.";
